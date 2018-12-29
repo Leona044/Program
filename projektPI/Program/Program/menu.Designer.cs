@@ -43,17 +43,21 @@
             this.clb_jela = new System.Windows.Forms.CheckedListBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.b_ponuda = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.mp_adresaupis = new MetroFramework.Controls.MetroPanel();
+            this.lbl_upisiadresu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_kolicina)).BeginInit();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.mp_adresaupis.SuspendLayout();
             this.SuspendLayout();
             // 
             // B_kolicina
             // 
             this.B_kolicina.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B_kolicina.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.B_kolicina.Location = new System.Drawing.Point(23, 220);
+            this.B_kolicina.Location = new System.Drawing.Point(23, 202);
             this.B_kolicina.Name = "B_kolicina";
             this.B_kolicina.Size = new System.Drawing.Size(130, 24);
             this.B_kolicina.TabIndex = 3;
@@ -65,7 +69,7 @@
             // 
             this.NUD_kolicina.BackColor = System.Drawing.Color.Beige;
             this.NUD_kolicina.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NUD_kolicina.Location = new System.Drawing.Point(147, 220);
+            this.NUD_kolicina.Location = new System.Drawing.Point(147, 202);
             this.NUD_kolicina.Name = "NUD_kolicina";
             this.NUD_kolicina.Size = new System.Drawing.Size(44, 24);
             this.NUD_kolicina.TabIndex = 4;
@@ -77,9 +81,9 @@
             this.B_odabir.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B_odabir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.B_odabir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.B_odabir.Location = new System.Drawing.Point(3, 3);
+            this.B_odabir.Location = new System.Drawing.Point(3, 1);
             this.B_odabir.Name = "B_odabir";
-            this.B_odabir.Size = new System.Drawing.Size(357, 53);
+            this.B_odabir.Size = new System.Drawing.Size(357, 40);
             this.B_odabir.TabIndex = 5;
             this.B_odabir.Text = "Vaš odabir:";
             this.B_odabir.UseVisualStyleBackColor = false;
@@ -97,7 +101,7 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(0, 47);
+            this.metroPanel1.Location = new System.Drawing.Point(0, 25);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(365, 70);
             this.metroPanel1.TabIndex = 10;
@@ -151,9 +155,9 @@
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(0, 151);
+            this.metroPanel2.Location = new System.Drawing.Point(0, 115);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(365, 267);
+            this.metroPanel2.Size = new System.Drawing.Size(365, 249);
             this.metroPanel2.TabIndex = 11;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
@@ -163,7 +167,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(205, 88);
+            this.listBox1.Location = new System.Drawing.Point(205, 70);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 82);
             this.listBox1.TabIndex = 15;
@@ -186,7 +190,7 @@
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[] {
         "0,00kn"};
-            this.metroTextBox1.Location = new System.Drawing.Point(235, 221);
+            this.metroTextBox1.Location = new System.Drawing.Point(235, 203);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -207,7 +211,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(249, 198);
+            this.label1.Location = new System.Drawing.Point(249, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 13;
@@ -226,7 +230,7 @@
             "Glavno jelo",
             "Salata",
             "Desert"});
-            this.clb_jela.Location = new System.Drawing.Point(38, 84);
+            this.clb_jela.Location = new System.Drawing.Point(38, 66);
             this.clb_jela.Name = "clb_jela";
             this.clb_jela.Size = new System.Drawing.Size(125, 86);
             this.clb_jela.TabIndex = 11;
@@ -255,12 +259,51 @@
             this.b_ponuda.UseVisualStyleBackColor = true;
             this.b_ponuda.Click += new System.EventHandler(this.b_ponuda_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox1.Location = new System.Drawing.Point(150, 22);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(192, 20);
+            this.textBox1.TabIndex = 17;
+            // 
+            // mp_adresaupis
+            // 
+            this.mp_adresaupis.BackColor = System.Drawing.Color.DarkGray;
+            this.mp_adresaupis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mp_adresaupis.BackgroundImage")));
+            this.mp_adresaupis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mp_adresaupis.Controls.Add(this.lbl_upisiadresu);
+            this.mp_adresaupis.Controls.Add(this.textBox1);
+            this.mp_adresaupis.Cursor = System.Windows.Forms.Cursors.Default;
+            this.mp_adresaupis.HorizontalScrollbarBarColor = true;
+            this.mp_adresaupis.HorizontalScrollbarHighlightOnWheel = false;
+            this.mp_adresaupis.HorizontalScrollbarSize = 10;
+            this.mp_adresaupis.Location = new System.Drawing.Point(0, 363);
+            this.mp_adresaupis.Name = "mp_adresaupis";
+            this.mp_adresaupis.Size = new System.Drawing.Size(365, 55);
+            this.mp_adresaupis.TabIndex = 18;
+            this.mp_adresaupis.VerticalScrollbarBarColor = true;
+            this.mp_adresaupis.VerticalScrollbarHighlightOnWheel = false;
+            this.mp_adresaupis.VerticalScrollbarSize = 10;
+            // 
+            // lbl_upisiadresu
+            // 
+            this.lbl_upisiadresu.AutoSize = true;
+            this.lbl_upisiadresu.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_upisiadresu.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_upisiadresu.Location = new System.Drawing.Point(10, 25);
+            this.lbl_upisiadresu.Name = "lbl_upisiadresu";
+            this.lbl_upisiadresu.Size = new System.Drawing.Size(134, 14);
+            this.lbl_upisiadresu.TabIndex = 18;
+            this.lbl_upisiadresu.Text = "Upiši adresu dostave:";
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Program.Properties.Resources.images3;
             this.ClientSize = new System.Drawing.Size(682, 418);
+            this.Controls.Add(this.mp_adresaupis);
             this.Controls.Add(this.b_ponuda);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.metroPanel2);
@@ -276,6 +319,8 @@
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.mp_adresaupis.ResumeLayout(false);
+            this.mp_adresaupis.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -295,5 +340,8 @@
         private System.Windows.Forms.Button b_menu1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button b_ponuda;
+        private System.Windows.Forms.TextBox textBox1;
+        private MetroFramework.Controls.MetroPanel mp_adresaupis;
+        private System.Windows.Forms.Label lbl_upisiadresu;
     }
 }
