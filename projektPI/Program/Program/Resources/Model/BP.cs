@@ -1,13 +1,13 @@
 ﻿using System;
-using Mono.Data.Sqlite;
+using System.Data.SQLite;
 
 namespace Program
 {
     public static class BP
     {
-        private static string connectionString = "URI=file:Baza.db";
+        private static string connectionString = "Data Source = C:\\Users\\Leona Strucelj\\Desktop\\projekt_menzaTOGO\\Program\\mybaza.db";
 
-        internal static SqliteConnection konekcija = new SqliteConnection(connectionString);
+        internal static SQLiteConnection konekcija = new SQLiteConnection (connectionString);
 
         public static void otvoriKonekciju()
         {

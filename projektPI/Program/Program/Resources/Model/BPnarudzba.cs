@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Mono.Data.Sqlite;
+using System.Data.SQLite;
 
 namespace Program
 {
@@ -10,7 +10,7 @@ namespace Program
         {
             BP.otvoriKonekciju();
 
-            SqliteCommand command = BP.konekcija.CreateCommand();
+            SQLiteCommand command = BP.konekcija.CreateCommand();
 
             command.CommandText = String.Format(@"Insert into narudzba (opis, iznos, status, jmbag_korisnik) Values ('{0}', '{1}', '{2}', '{3}')",
                                                 n.Opis, n.Iznos, n.Status, pomocna.trenutni.Jmbag);
@@ -26,7 +26,7 @@ namespace Program
         {
             BP.otvoriKonekciju();
 
-            SqliteCommand command = BP.konekcija.CreateCommand();
+            SQLiteCommand command = BP.konekcija.CreateCommand();
 
             command.CommandText = String.Format(@"Update narudzba set status = '{0}' where id = '{1}'", status, id);
 
@@ -43,11 +43,11 @@ namespace Program
 
             BP.otvoriKonekciju();
 
-            SqliteCommand command = BP.konekcija.CreateCommand();
+            SQLiteCommand command = BP.konekcija.CreateCommand();
 
             command.CommandText = String.Format("Select * from narudzba where jmbag_korisnik = '{0}'", pomocna.trenutni.Jmbag);
 
-            SqliteDataReader reader = command.ExecuteReader();
+            SQLiteDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
@@ -76,11 +76,11 @@ namespace Program
 
             BP.otvoriKonekciju();
 
-            SqliteCommand command = BP.konekcija.CreateCommand();
+            SQLiteCommand command = BP.konekcija.CreateCommand();
 
             command.CommandText = String.Format("Select * from narudzba where status = '{0}'", status);
 
-            SqliteDataReader reader = command.ExecuteReader();
+            SQLiteDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
@@ -107,7 +107,7 @@ namespace Program
         {
             BP.otvoriKonekciju();
 
-            SqliteCommand command = BP.konekcija.CreateCommand();
+            SQLiteCommand command = BP.konekcija.CreateCommand();
 
             command.CommandText = String.Format(@"Delete from narudzba where id = '{0}'", id);
 

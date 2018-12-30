@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Mono.Data.Sqlite;
+using System.Data.SQLite;
 
 namespace Program
 {
@@ -10,7 +10,7 @@ namespace Program
         {
             BP.otvoriKonekciju();
 
-            SqliteCommand command = BP.konekcija.CreateCommand();
+            SQLiteCommand command = BP.konekcija.CreateCommand();
 
             command.CommandText = String.Format(@"Insert into korisnik (jmbag, email, lozinka, adresa, kontaktbroj) Values ('{0}', '{1}', '{2}', '{3}', '{4}')",
                                               k.Jmbag, k.Email, k.Lozinka, k.Adresa, k.KontaktBroj, 0);
@@ -28,11 +28,11 @@ namespace Program
 
             BP.otvoriKonekciju();
 
-            SqliteCommand command = BP.konekcija.CreateCommand();
+            SQLiteCommand command = BP.konekcija.CreateCommand();
 
             command.CommandText = "Select * from korisnik";
 
-            SqliteDataReader reader = command.ExecuteReader();
+            SQLiteDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
