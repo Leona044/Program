@@ -7,7 +7,7 @@
             private string adresa;
             private string email;
             private string lozinka;
-            private string kontaktBroj;
+            private int kontaktBroj;
 
             public Korisnik()
             {
@@ -28,7 +28,7 @@
 
            
 
-            public string KontaktBroj
+            public int KontaktBroj
             {
                 get
                 {

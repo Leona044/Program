@@ -17,9 +17,9 @@ namespace Program
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new prijava());
+            Application.Run(new proba());
 
-        
+            
            
         }
 

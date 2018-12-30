@@ -12,7 +12,7 @@ namespace Program
 
             SQLiteCommand command = BP.konekcija.CreateCommand();
 
-            command.CommandText = String.Format(@"Insert into narudzba (opis, iznos, status, jmbag_korisnik) Values ('{0}', '{1}', '{2}', '{3}')",
+            command.CommandText = String.Format(@"Insert into narudzba (opis, iznos, status, jmbag_k) Values ('{0}', '{1}', '{2}', '{3}')",
                                                 n.Opis, n.Iznos, n.Status, pomocna.trenutni.Jmbag);
 
             command.ExecuteNonQuery();
@@ -21,7 +21,7 @@ namespace Program
 
             BP.zatvoriKonekciju();
         }
-
+        
         public static void Uredi(long id, string status)
         {
             BP.otvoriKonekciju();
@@ -36,7 +36,7 @@ namespace Program
 
             BP.zatvoriKonekciju();
         }
-
+     
         public static List<Narudzba> DohvatiSve()
         {
             List<Narudzba> lista = new List<Narudzba>();
@@ -45,7 +45,7 @@ namespace Program
 
             SQLiteCommand command = BP.konekcija.CreateCommand();
 
-            command.CommandText = String.Format("Select * from narudzba where jmbag_korisnik = '{0}'", pomocna.trenutni.Jmbag);
+            command.CommandText = String.Format("Select * from narudzba");
 
             SQLiteDataReader reader = command.ExecuteReader();
 
@@ -53,10 +53,10 @@ namespace Program
             {
                 Narudzba n = new Narudzba();
 
-                n.Jmbag_k = (int)(Int64)reader["jmbag_korisnik"];
-                n.Id = (int)(Int64)reader["id"];
+                n.Jmbag_k = Convert.ToInt32(reader["id_k"]);
+                n.Id = Convert.ToInt32(reader["id_n"]);
                 n.Opis = (string)reader["opis"];
-                n.Iznos = (Double)reader["iznos"];
+                n.Iznos = Convert.ToDouble(reader["iznos"]);
                 n.Status = (string)reader["status"];
 
                 lista.Add(n);
@@ -86,10 +86,10 @@ namespace Program
             {
                 Narudzba n = new Narudzba();
 
-                n.Jmbag_k = (int)(Int64)reader["jmbag_korisnik"];
-                n.Id = (int)(Int64)reader["id"];
+                n.Jmbag_k = Convert.ToInt32(reader["id_k"]);
+                n.Id = Convert.ToInt32(reader["id_n"]);
                 n.Opis = (string)reader["opis"];
-                n.Iznos = (Double)reader["iznos"];
+                n.Iznos = Convert.ToDouble(reader["iznos"]);
                 n.Status = (string)reader["status"];
 
                 lista.Add(n);

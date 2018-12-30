@@ -38,8 +38,9 @@ namespace Program
             {
                 Korisnik k = new Korisnik();
 
-                k.Jmbag = (int)(Int64)reader["jmbag"];
-                k.KontaktBroj = (string)reader["kontaktbroj"];
+                //k.Jmbag = (int)(Int64)reader["jmbag"];
+                k.Jmbag = Convert.ToInt32(reader["jmbag"]);
+                k.KontaktBroj = Convert.ToInt32(reader["kontaktbroj"]);
                 k.Adresa = (string)reader["adresa"];
                 k.Email = (string)reader["email"];
                 k.Lozinka = (string)reader["lozinka"];
