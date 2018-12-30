@@ -6,7 +6,7 @@
         private string opis;
         private double iznos;
         private string status;
-        private long id_k;
+        private long jmbag_k;
 
         public Narudzba()
         {
@@ -66,17 +66,19 @@
             }
         }
 
-        public long Id_k
+        public long Jmbag_k
         {
             get
             {
-                return id_k;
+                return jmbag_k;
             }
 
             set
             {
-                id_k = value;
+                jmbag_k = value;
             }
         }
+
+       
     }
 }
