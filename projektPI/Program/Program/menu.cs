@@ -94,17 +94,34 @@ namespace Program
 
         private void btnMenu1_Click(object sender, EventArgs e)
         {
+            foreach(Control c in metroPanel1.Controls)
+            {
+                c.BackColor = Color.WhiteSmoke;
+            }
+            Control o = (Control)sender;
+            o.BackColor = Color.Yellow;
 
-        }
+        }  
 
         private void btnMenu2_Click(object sender, EventArgs e)
         {
+            foreach (Control c in metroPanel1.Controls)
+            {
+                c.BackColor = Color.WhiteSmoke;
+            }
+            Control o = (Control)sender;
+            o.BackColor = Color.Yellow;
 
         }
 
         private void BtnVege_Click(object sender, EventArgs e)
         {
-
+            foreach (Control c in metroPanel1.Controls)
+            {
+                c.BackColor = Color.WhiteSmoke;
+            }
+            Control o = (Control)sender;
+            o.BackColor = Color.Yellow;
         }
 
         private void NUD_kolicina_ValueChanged(object sender, EventArgs e)
