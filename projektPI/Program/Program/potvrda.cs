@@ -21,12 +21,12 @@ namespace Program
 
         }
 
-        private void mlbl_potvrda_Click(object sender, EventArgs e)
+        private void LblPotvrdivanje_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPotvrda_Click(object sender, EventArgs e)
         {
             new nacinplacanja().Show();
             this.Hide();
@@ -37,7 +37,7 @@ namespace Program
            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnNePotvrda_Click(object sender, EventArgs e)
         {
             this.Hide();
         }

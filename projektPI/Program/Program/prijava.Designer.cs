@@ -29,67 +29,70 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(prijava));
-            this.tB_username = new System.Windows.Forms.TextBox();
-            this.tB_password = new System.Windows.Forms.TextBox();
-            this.l_username = new System.Windows.Forms.Label();
-            this.l_password = new System.Windows.Forms.Label();
-            this.b_prijava = new System.Windows.Forms.Button();
+            this.inputEmail = new System.Windows.Forms.TextBox();
+            this.inputLozinka = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblLozinka = new System.Windows.Forms.Label();
+            this.btnPrijava = new System.Windows.Forms.Button();
             this.video = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.video)).BeginInit();
             this.SuspendLayout();
             // 
-            // tB_username
+            // inputEmail
             // 
-            this.tB_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB_username.Location = new System.Drawing.Point(461, 173);
-            this.tB_username.Name = "tB_username";
-            this.tB_username.Size = new System.Drawing.Size(189, 26);
-            this.tB_username.TabIndex = 0;
+            this.inputEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputEmail.Location = new System.Drawing.Point(461, 173);
+            this.inputEmail.Name = "inputEmail";
+            this.inputEmail.Size = new System.Drawing.Size(189, 26);
+            this.inputEmail.TabIndex = 0;
+            this.inputEmail.TextChanged += new System.EventHandler(this.inputEmail_TextChanged);
             // 
-            // tB_password
+            // inputLozinka
             // 
-            this.tB_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB_password.Location = new System.Drawing.Point(461, 218);
-            this.tB_password.Name = "tB_password";
-            this.tB_password.Size = new System.Drawing.Size(189, 26);
-            this.tB_password.TabIndex = 1;
-            this.tB_password.UseSystemPasswordChar = true;
+            this.inputLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputLozinka.Location = new System.Drawing.Point(461, 218);
+            this.inputLozinka.Name = "inputLozinka";
+            this.inputLozinka.Size = new System.Drawing.Size(189, 26);
+            this.inputLozinka.TabIndex = 1;
+            this.inputLozinka.UseSystemPasswordChar = true;
+            this.inputLozinka.TextChanged += new System.EventHandler(this.inputLozinka_TextChanged);
             // 
-            // l_username
+            // lblEmail
             // 
-            this.l_username.AutoSize = true;
-            this.l_username.BackColor = System.Drawing.Color.Transparent;
-            this.l_username.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_username.ForeColor = System.Drawing.Color.White;
-            this.l_username.Location = new System.Drawing.Point(351, 177);
-            this.l_username.Name = "l_username";
-            this.l_username.Size = new System.Drawing.Size(104, 19);
-            this.l_username.TabIndex = 2;
-            this.l_username.Text = "USERNAME";
-            this.l_username.Click += new System.EventHandler(this.l_username_Click);
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(351, 177);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(104, 19);
+            this.lblEmail.TabIndex = 2;
+            this.lblEmail.Text = "USERNAME";
+            this.lblEmail.Click += new System.EventHandler(this.L_username_Click);
             // 
-            // l_password
+            // lblLozinka
             // 
-            this.l_password.AutoSize = true;
-            this.l_password.BackColor = System.Drawing.Color.Transparent;
-            this.l_password.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_password.ForeColor = System.Drawing.Color.White;
-            this.l_password.Location = new System.Drawing.Point(351, 222);
-            this.l_password.Name = "l_password";
-            this.l_password.Size = new System.Drawing.Size(104, 19);
-            this.l_password.TabIndex = 3;
-            this.l_password.Text = "PASSWORD";
+            this.lblLozinka.AutoSize = true;
+            this.lblLozinka.BackColor = System.Drawing.Color.Transparent;
+            this.lblLozinka.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLozinka.ForeColor = System.Drawing.Color.White;
+            this.lblLozinka.Location = new System.Drawing.Point(351, 222);
+            this.lblLozinka.Name = "lblLozinka";
+            this.lblLozinka.Size = new System.Drawing.Size(104, 19);
+            this.lblLozinka.TabIndex = 3;
+            this.lblLozinka.Text = "PASSWORD";
+            this.lblLozinka.Click += new System.EventHandler(this.lblLozinka_Click);
             // 
-            // b_prijava
+            // btnPrijava
             // 
-            this.b_prijava.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.b_prijava.Location = new System.Drawing.Point(515, 262);
-            this.b_prijava.Name = "b_prijava";
-            this.b_prijava.Size = new System.Drawing.Size(75, 23);
-            this.b_prijava.TabIndex = 4;
-            this.b_prijava.Text = "Log in";
-            this.b_prijava.UseVisualStyleBackColor = true;
-            this.b_prijava.Click += new System.EventHandler(this.b_prijava_Click);
+            this.btnPrijava.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrijava.Location = new System.Drawing.Point(515, 262);
+            this.btnPrijava.Name = "btnPrijava";
+            this.btnPrijava.Size = new System.Drawing.Size(75, 23);
+            this.btnPrijava.TabIndex = 4;
+            this.btnPrijava.Text = "Log in";
+            this.btnPrijava.UseVisualStyleBackColor = true;
+            this.btnPrijava.Click += new System.EventHandler(this.B_prijava_Click);
             // 
             // video
             // 
@@ -102,8 +105,8 @@
             this.video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("video.OcxState")));
             this.video.Size = new System.Drawing.Size(315, 230);
             this.video.TabIndex = 5;
-            this.video.Enter += new System.EventHandler(this.video_Enter);
-            this.video.Leave += new System.EventHandler(this.b_prijava_Click);
+            this.video.Enter += new System.EventHandler(this.Video_Enter);
+            this.video.Leave += new System.EventHandler(this.B_prijava_Click);
             // 
             // prijava
             // 
@@ -112,11 +115,11 @@
             this.BackgroundImage = global::Program.Properties.Resources.images3;
             this.ClientSize = new System.Drawing.Size(682, 418);
             this.Controls.Add(this.video);
-            this.Controls.Add(this.b_prijava);
-            this.Controls.Add(this.l_password);
-            this.Controls.Add(this.l_username);
-            this.Controls.Add(this.tB_password);
-            this.Controls.Add(this.tB_username);
+            this.Controls.Add(this.btnPrijava);
+            this.Controls.Add(this.lblLozinka);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.inputLozinka);
+            this.Controls.Add(this.inputEmail);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "prijava";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -129,11 +132,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tB_username;
-        private System.Windows.Forms.TextBox tB_password;
-        private System.Windows.Forms.Label l_username;
-        private System.Windows.Forms.Label l_password;
-        private System.Windows.Forms.Button b_prijava;
+        private System.Windows.Forms.TextBox inputEmail;
+        private System.Windows.Forms.TextBox inputLozinka;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblLozinka;
+        private System.Windows.Forms.Button btnPrijava;
         private AxWMPLib.AxWindowsMediaPlayer video;
     }
 }

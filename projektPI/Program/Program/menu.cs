@@ -73,12 +73,12 @@ namespace Program
 
         }
 
-        private void cb_jela_SelectedIndexChanged(object sender, EventArgs e)
+        private void ClbOdabir_SelectedIndexChanged(object sender, EventArgs e)
         {
            
         }  
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void LbOdabrano_SelectedIndexChanged(object sender, EventArgs e)
         {
             /*listBox1.Items.Clear();
             foreach(string s in 
@@ -90,6 +90,26 @@ namespace Program
         private void b_ponuda_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.scpu.hr/hr/prehrana/");
+        }
+
+        private void btnMenu1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMenu2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnVege_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NUD_kolicina_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -74,6 +74,7 @@
             this.NUD_kolicina.Size = new System.Drawing.Size(44, 24);
             this.NUD_kolicina.TabIndex = 4;
             this.NUD_kolicina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NUD_kolicina.ValueChanged += new System.EventHandler(this.NUD_kolicina_ValueChanged);
             // 
             // B_odabir
             // 
@@ -118,6 +119,7 @@
             this.b_vege.TabIndex = 4;
             this.b_vege.Text = "VEGE";
             this.b_vege.UseVisualStyleBackColor = true;
+            this.b_vege.Click += new System.EventHandler(this.BtnVege_Click);
             // 
             // b_menu2
             // 
@@ -128,6 +130,7 @@
             this.b_menu2.TabIndex = 3;
             this.b_menu2.Text = "MENU 2";
             this.b_menu2.UseVisualStyleBackColor = true;
+            this.b_menu2.Click += new System.EventHandler(this.btnMenu2_Click);
             // 
             // b_menu1
             // 
@@ -138,6 +141,7 @@
             this.b_menu1.TabIndex = 2;
             this.b_menu1.Text = "MENU 1";
             this.b_menu1.UseVisualStyleBackColor = true;
+            this.b_menu1.Click += new System.EventHandler(this.btnMenu1_Click);
             // 
             // metroPanel2
             // 
@@ -171,7 +175,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 82);
             this.listBox1.TabIndex = 15;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.LbOdabrano_SelectedIndexChanged);
             // 
             // metroTextBox1
             // 
@@ -234,7 +238,7 @@
             this.clb_jela.Name = "clb_jela";
             this.clb_jela.Size = new System.Drawing.Size(125, 86);
             this.clb_jela.TabIndex = 11;
-            this.clb_jela.SelectedIndexChanged += new System.EventHandler(this.cb_jela_SelectedIndexChanged);
+            this.clb_jela.SelectedIndexChanged += new System.EventHandler(this.ClbOdabir_SelectedIndexChanged);
             // 
             // pictureBox4
             // 

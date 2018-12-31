@@ -17,20 +17,56 @@ namespace Program
             InitializeComponent();
         }
 
-        private void l_username_Click(object sender, EventArgs e)
+        private void L_username_Click(object sender, EventArgs e)
+        { 
+        }
+
+        private void B_prijava_Click(object sender, EventArgs e)
+        {
+
+            prijava prijava = new prijava();
+            string email = inputEmail.Text;
+            string lozinka = inputLozinka.Text;
+
+            if(string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(lozinka))
+            {
+                MessageBox.Show("Korisničko ime i/ili lozinka nisu uneseni. Pokušajte ponovno.", "Greška kod prijave!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                inputEmail.Clear();
+                inputLozinka.Clear();
+            }
+            else
+            {
+                List<Korisnik> upisano = BPkorisnik.DohvatiPrijava(email, lozinka);
+                if (upisano.Count > 0)
+                {
+                    new menu().Show();
+                    this.Hide();
+                    video.Ctlcontrols.stop();
+                }
+                else
+                {
+                    MessageBox.Show("Korisnik ne postoji. Pokušajte ponovno.", "Greška kod prijave!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+ 
+        }
+
+        private void Video_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void b_prijava_Click(object sender, EventArgs e)
+        private void inputEmail_TextChanged(object sender, EventArgs e)
         {
-            new menu().Show();
-            this.Hide();
-            video.Ctlcontrols.stop();
 
         }
 
-        private void video_Enter(object sender, EventArgs e)
+        private void inputLozinka_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLozinka_Click(object sender, EventArgs e)
         {
 
         }

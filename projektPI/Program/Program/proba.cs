@@ -17,14 +17,14 @@ namespace Program
             InitializeComponent();
         }
 
-        private void OsvjeziNarudzbe() {
-            List<Narudzba> listaNarudzba = BPnarudzba.DohvatiSve();
-            d1.DataSource = listaNarudzba;
+        private void OsvjeziKorisnike() {
+            List<Korisnik> listaKorisnika = BPkorisnik.DohvatiSve();
+            d1.DataSource = listaKorisnika;
         }
 
         private void proba_Load(object sender, EventArgs e)
         {
-            OsvjeziNarudzbe();
+            OsvjeziKorisnike();
         }
     }
 }
