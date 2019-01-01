@@ -31,17 +31,17 @@ namespace WindowsFormsApp1
 
         private void Button1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_MouseHover(object sender, EventArgs e)
@@ -88,6 +88,27 @@ namespace WindowsFormsApp1
         {
             new menu().Show();
             this.Hide();
+        }
+
+        private void b_gotovinsko_Click(object sender, EventArgs e)
+        {
+            b_gotovinsko.BackColor = Color.Yellow;
+            if (b_online.BackColor.Equals(Color.Yellow))
+            {
+                b_online.BackColor = Color.WhiteSmoke;
+            }
+  
+        }
+
+
+        private void b_online_Click(object sender, EventArgs e)
+        {
+            b_online.BackColor = Color.Yellow;
+            if (b_gotovinsko.BackColor.Equals(Color.Yellow))
+            {
+                b_gotovinsko.BackColor =Color.WhiteSmoke;
+            }
+  
         }
     }
 }

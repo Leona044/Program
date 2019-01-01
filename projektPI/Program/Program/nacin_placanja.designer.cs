@@ -64,6 +64,7 @@
             this.b_gotovinsko.TabIndex = 0;
             this.b_gotovinsko.Text = "GOTOVINSKO";
             this.b_gotovinsko.UseVisualStyleBackColor = true;
+            this.b_gotovinsko.Click += new System.EventHandler(this.b_gotovinsko_Click);
             // 
             // p_online
             // 
@@ -107,6 +108,7 @@
             this.b_online.TabIndex = 1;
             this.b_online.Text = "ONLINE";
             this.b_online.UseVisualStyleBackColor = true;
+            this.b_online.Click += new System.EventHandler(this.b_online_Click);
             this.b_online.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             this.b_online.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
