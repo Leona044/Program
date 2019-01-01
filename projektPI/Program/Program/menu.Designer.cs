@@ -70,10 +70,25 @@
             this.NUD_kolicina.BackColor = System.Drawing.Color.Beige;
             this.NUD_kolicina.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUD_kolicina.Location = new System.Drawing.Point(147, 202);
+            this.NUD_kolicina.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NUD_kolicina.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.NUD_kolicina.Name = "NUD_kolicina";
             this.NUD_kolicina.Size = new System.Drawing.Size(44, 24);
             this.NUD_kolicina.TabIndex = 4;
             this.NUD_kolicina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NUD_kolicina.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.NUD_kolicina.ValueChanged += new System.EventHandler(this.NUD_kolicina_ValueChanged);
             // 
             // B_odabir
@@ -170,10 +185,12 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 17;
             this.listBox1.Location = new System.Drawing.Point(205, 70);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 82);
+            this.listBox1.Size = new System.Drawing.Size(120, 72);
             this.listBox1.TabIndex = 15;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.LbOdabrano_SelectedIndexChanged);
             // 
@@ -210,6 +227,7 @@
             this.metroTextBox1.UseSelectable = true;
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroTextBox1.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // label1
             // 
@@ -238,6 +256,7 @@
             this.clb_jela.Name = "clb_jela";
             this.clb_jela.Size = new System.Drawing.Size(125, 86);
             this.clb_jela.TabIndex = 11;
+            this.clb_jela.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clb_jela_ItemCheck);
             this.clb_jela.SelectedIndexChanged += new System.EventHandler(this.ClbOdabir_SelectedIndexChanged);
             // 
             // pictureBox4

@@ -17,6 +17,8 @@ namespace Program
             InitializeComponent();
         }
 
+        decimal iznosKucica = 0;
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -76,15 +78,11 @@ namespace Program
         private void ClbOdabir_SelectedIndexChanged(object sender, EventArgs e)
         {
            
-        }  
+        }
 
         private void LbOdabrano_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*listBox1.Items.Clear();
-            foreach(string s in 
-            {
-                listBox1.Items.Add(s);
-            }*/
+            
         }
 
         private void b_ponuda_Click(object sender, EventArgs e)
@@ -126,7 +124,65 @@ namespace Program
 
         private void NUD_kolicina_ValueChanged(object sender, EventArgs e)
         {
+           izracunaj();
 
+        }
+
+        public void izracunaj()
+        {
+            decimal konacno = NUD_kolicina.Value * iznosKucica;
+            string str = konacno.ToString();
+            metroTextBox1.Text = konacno + "kn";
+        }
+
+        private void clb_jela_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            CheckedListBox clb = (CheckedListBox)sender;
+
+            int brojOznacenih = clb.SelectedItems.Count;
+            for (int i = 0; i < brojOznacenih; i++)
+            {
+                if (e.NewValue == CheckState.Checked)
+                {
+                    listBox1.Items.Add(clb.SelectedItem);
+                }
+                else
+                {
+                    listBox1.Items.Remove(clb.SelectedItem);
+                }
+            }
+
+           double iznos = 0;
+            foreach (object j in listBox1.Items)
+            {
+                if(j.Equals("Glavno jelo")) 
+                {
+                    iznos += 2.50;
+                }
+                else if (j.Equals("Juha"))
+                {
+                    iznos += 1.00;
+                }
+                else if (j.Equals("Salata"))
+                {
+                    iznos += 1.00;
+                }
+                else if (j.Equals("Desert"))
+                {
+                    iznos += 2.00;
+                }
+
+            }
+            iznosKucica = (decimal)iznos;
+            metroTextBox1.Text = iznos + "kn";
+            
+
+
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
