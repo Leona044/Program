@@ -66,7 +66,19 @@ namespace Program
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            new potvrda(this).Show();
+           
+            if (listBox1.Items.Count == 0)
+            {
+                lblObavezanOdabir.Text = "Obavezno popuniti polje!";
+                lblObavezanOdabir.ForeColor = Color.Red;
+            }
+            else if (string.IsNullOrWhiteSpace(textBox1.Text))
+            { 
+                lblUpisObavezan.Text = "Obavezno popuniti polje!";
+                lblUpisObavezan.ForeColor = Color.Red; 
+            }
+            else
+                 new potvrda(this).Show();
     
         }
 
@@ -183,6 +195,23 @@ namespace Program
         private void metroTextBox1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+          
+            
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            lblUpisObavezan.Text = "";
+            
+        }
+
+        private void clb_jela_Click(object sender, EventArgs e)
+        {
+            lblObavezanOdabir.Text = "";
         }
     }
 }

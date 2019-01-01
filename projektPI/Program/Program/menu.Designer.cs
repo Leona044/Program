@@ -37,6 +37,8 @@
             this.b_menu2 = new System.Windows.Forms.Button();
             this.b_menu1 = new System.Windows.Forms.Button();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.lblObavezanOdabir = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,10 +47,12 @@
             this.b_ponuda = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.mp_adresaupis = new MetroFramework.Controls.MetroPanel();
+            this.lblUpisObavezan = new System.Windows.Forms.Label();
             this.lbl_upisiadresu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_kolicina)).BeginInit();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.mp_adresaupis.SuspendLayout();
             this.SuspendLayout();
@@ -164,6 +168,8 @@
             this.metroPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroPanel2.BackgroundImage")));
             this.metroPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.metroPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel2.Controls.Add(this.lblObavezanOdabir);
+            this.metroPanel2.Controls.Add(this.pictureBox1);
             this.metroPanel2.Controls.Add(this.listBox1);
             this.metroPanel2.Controls.Add(this.metroTextBox1);
             this.metroPanel2.Controls.Add(this.label1);
@@ -183,12 +189,30 @@
             this.metroPanel2.VerticalScrollbarSize = 10;
             this.metroPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel2_Paint);
             // 
+            // lblObavezanOdabir
+            // 
+            this.lblObavezanOdabir.AutoSize = true;
+            this.lblObavezanOdabir.Location = new System.Drawing.Point(35, 48);
+            this.lblObavezanOdabir.Name = "lblObavezanOdabir";
+            this.lblObavezanOdabir.Size = new System.Drawing.Size(0, 13);
+            this.lblObavezanOdabir.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(250, 54);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 23);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // listBox1
             // 
             this.listBox1.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 17;
-            this.listBox1.Location = new System.Drawing.Point(205, 70);
+            this.listBox1.Location = new System.Drawing.Point(205, 80);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 72);
             this.listBox1.TabIndex = 15;
@@ -257,6 +281,7 @@
             this.clb_jela.Size = new System.Drawing.Size(125, 86);
             this.clb_jela.TabIndex = 11;
             this.clb_jela.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clb_jela_ItemCheck);
+            this.clb_jela.Click += new System.EventHandler(this.clb_jela_Click);
             this.clb_jela.SelectedIndexChanged += new System.EventHandler(this.ClbOdabir_SelectedIndexChanged);
             // 
             // pictureBox4
@@ -289,12 +314,16 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(192, 20);
             this.textBox1.TabIndex = 17;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // mp_adresaupis
             // 
             this.mp_adresaupis.BackColor = System.Drawing.Color.DarkGray;
             this.mp_adresaupis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mp_adresaupis.BackgroundImage")));
             this.mp_adresaupis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mp_adresaupis.Controls.Add(this.lblUpisObavezan);
             this.mp_adresaupis.Controls.Add(this.lbl_upisiadresu);
             this.mp_adresaupis.Controls.Add(this.textBox1);
             this.mp_adresaupis.Cursor = System.Windows.Forms.Cursors.Default;
@@ -308,6 +337,15 @@
             this.mp_adresaupis.VerticalScrollbarBarColor = true;
             this.mp_adresaupis.VerticalScrollbarHighlightOnWheel = false;
             this.mp_adresaupis.VerticalScrollbarSize = 10;
+            // 
+            // lblUpisObavezan
+            // 
+            this.lblUpisObavezan.AutoSize = true;
+            this.lblUpisObavezan.BackColor = System.Drawing.Color.Transparent;
+            this.lblUpisObavezan.Location = new System.Drawing.Point(177, 6);
+            this.lblUpisObavezan.Name = "lblUpisObavezan";
+            this.lblUpisObavezan.Size = new System.Drawing.Size(0, 13);
+            this.lblUpisObavezan.TabIndex = 19;
             // 
             // lbl_upisiadresu
             // 
@@ -341,6 +379,7 @@
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.mp_adresaupis.ResumeLayout(false);
             this.mp_adresaupis.PerformLayout();
@@ -366,5 +405,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private MetroFramework.Controls.MetroPanel mp_adresaupis;
         private System.Windows.Forms.Label lbl_upisiadresu;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblUpisObavezan;
+        private System.Windows.Forms.Label lblObavezanOdabir;
     }
 }
