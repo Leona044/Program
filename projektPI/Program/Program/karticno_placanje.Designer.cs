@@ -34,12 +34,12 @@
             this.b_amex = new System.Windows.Forms.Button();
             this.b_maestro = new System.Windows.Forms.Button();
             this.l_cnumber = new System.Windows.Forms.Label();
-            this.tb_cardnumber = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbInputCNumb = new System.Windows.Forms.TextBox();
+            this.tbInputName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbInputExDate = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbInputSeCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -47,6 +47,8 @@
             this.bMasterOkvir = new System.Windows.Forms.Button();
             this.bAmexOkvir = new System.Windows.Forms.Button();
             this.bMaestroOkvir = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,28 +113,32 @@
             this.l_cnumber.TabIndex = 5;
             this.l_cnumber.Text = "Card number";
             // 
-            // tb_cardnumber
+            // tbInputCNumb
             // 
-            this.tb_cardnumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_cardnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_cardnumber.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.tb_cardnumber.Location = new System.Drawing.Point(105, 180);
-            this.tb_cardnumber.Name = "tb_cardnumber";
-            this.tb_cardnumber.Size = new System.Drawing.Size(255, 22);
-            this.tb_cardnumber.TabIndex = 6;
-            this.tb_cardnumber.Text = " 1234 5678 9102 3456";
+            this.tbInputCNumb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbInputCNumb.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbInputCNumb.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbInputCNumb.Location = new System.Drawing.Point(105, 180);
+            this.tbInputCNumb.Name = "tbInputCNumb";
+            this.tbInputCNumb.Size = new System.Drawing.Size(255, 22);
+            this.tbInputCNumb.TabIndex = 6;
+            this.tbInputCNumb.Text = " 1234 5678 9102 3456";
+            this.tbInputCNumb.Click += new System.EventHandler(this.tbInputCNumb_Click);
+            this.tbInputCNumb.TextChanged += new System.EventHandler(this.tb_cardnumber_TextChanged);
+            this.tbInputCNumb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbInputCNumb_KeyPress);
             // 
-            // textBox1
+            // tbInputName
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.textBox1.Location = new System.Drawing.Point(105, 233);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 22);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = " Ex. Leona Štrucelj";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbInputName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbInputName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbInputName.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbInputName.Location = new System.Drawing.Point(105, 233);
+            this.tbInputName.Name = "tbInputName";
+            this.tbInputName.Size = new System.Drawing.Size(255, 22);
+            this.tbInputName.TabIndex = 8;
+            this.tbInputName.Text = " Ex. Leona Štrucelj";
+            this.tbInputName.Click += new System.EventHandler(this.tbInputName_Click);
+            this.tbInputName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -147,16 +153,18 @@
             this.label1.Text = "Name on card";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox2
+            // tbInputExDate
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.textBox2.Location = new System.Drawing.Point(105, 289);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(110, 22);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.Text = " 01/19";
+            this.tbInputExDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbInputExDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbInputExDate.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbInputExDate.Location = new System.Drawing.Point(105, 289);
+            this.tbInputExDate.Name = "tbInputExDate";
+            this.tbInputExDate.Size = new System.Drawing.Size(110, 22);
+            this.tbInputExDate.TabIndex = 10;
+            this.tbInputExDate.Text = " 01/19";
+            this.tbInputExDate.Click += new System.EventHandler(this.tbInputExDate_Click);
+            this.tbInputExDate.TextChanged += new System.EventHandler(this.tbInputExDate_TextChanged);
             // 
             // label2
             // 
@@ -170,17 +178,19 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Expiry date";
             // 
-            // textBox3
+            // tbInputSeCode
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.textBox3.Location = new System.Drawing.Point(250, 289);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(110, 22);
-            this.textBox3.TabIndex = 12;
-            this.textBox3.Text = "012";
-            this.textBox3.UseSystemPasswordChar = true;
+            this.tbInputSeCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbInputSeCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbInputSeCode.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbInputSeCode.Location = new System.Drawing.Point(250, 289);
+            this.tbInputSeCode.Name = "tbInputSeCode";
+            this.tbInputSeCode.Size = new System.Drawing.Size(110, 22);
+            this.tbInputSeCode.TabIndex = 12;
+            this.tbInputSeCode.Text = "012";
+            this.tbInputSeCode.UseSystemPasswordChar = true;
+            this.tbInputSeCode.Click += new System.EventHandler(this.tbInputSeCode_Click);
+            this.tbInputSeCode.TextChanged += new System.EventHandler(this.tbInputSeCode_TextChanged);
             // 
             // label3
             // 
@@ -262,23 +272,43 @@
             this.bMaestroOkvir.Text = "button5";
             this.bMaestroOkvir.UseVisualStyleBackColor = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(366, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(366, 233);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "label5";
+            // 
             // karticno_placanje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Program.Properties.Resources.images3;
             this.ClientSize = new System.Drawing.Size(682, 418);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.b_visa);
             this.Controls.Add(this.bVisaOkvir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbInputSeCode);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbInputExDate);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbInputName);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tb_cardnumber);
+            this.Controls.Add(this.tbInputCNumb);
             this.Controls.Add(this.l_cnumber);
             this.Controls.Add(this.b_maestro);
             this.Controls.Add(this.b_amex);
@@ -304,12 +334,12 @@
         private System.Windows.Forms.Button b_amex;
         private System.Windows.Forms.Button b_maestro;
         private System.Windows.Forms.Label l_cnumber;
-        private System.Windows.Forms.TextBox tb_cardnumber;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbInputCNumb;
+        private System.Windows.Forms.TextBox tbInputName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbInputExDate;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbInputSeCode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -317,5 +347,7 @@
         private System.Windows.Forms.Button bMasterOkvir;
         private System.Windows.Forms.Button bAmexOkvir;
         private System.Windows.Forms.Button bMaestroOkvir;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
