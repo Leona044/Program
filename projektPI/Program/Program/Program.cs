@@ -17,10 +17,10 @@ namespace Program
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new nacinplacanja());
+            Application.Run(new karticno_placanje());
 
-            
-           
+
+
         }
 
     }

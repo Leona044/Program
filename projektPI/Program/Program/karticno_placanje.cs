@@ -48,5 +48,73 @@ namespace Program
         {
             new placanje_uspjesno().Show();
         }
+
+        private void b_visa_Click(object sender, EventArgs e)
+        {
+            bVisaOkvir.BackColor = Color.Yellow;
+            if (bMasterOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bMasterOkvir.BackColor = Color.Transparent;
+            }
+            else if (bMaestroOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bMaestroOkvir.BackColor = Color.Transparent;
+            }
+            else if (bAmexOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bAmexOkvir.BackColor = Color.Transparent;
+            }
+        }
+
+        private void b_mastercard_Click(object sender, EventArgs e)
+        {
+            bMasterOkvir.BackColor = Color.Yellow;
+            if (bVisaOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bVisaOkvir.BackColor = Color.Transparent;
+            }
+            else if (bMaestroOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bMaestroOkvir.BackColor = Color.Transparent;
+            }
+            else if (bAmexOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bAmexOkvir.BackColor = Color.Transparent;
+            }
+        }
+
+        private void b_amex_Click(object sender, EventArgs e)
+        {
+            bAmexOkvir.BackColor = Color.Yellow;
+            if (bMasterOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bMasterOkvir.BackColor = Color.Transparent;
+            }
+            else if (bMaestroOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bMaestroOkvir.BackColor = Color.Transparent;
+            }
+            else if (bVisaOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bVisaOkvir.BackColor = Color.Transparent;
+            }
+        }
+
+        private void b_maestro_Click(object sender, EventArgs e)
+        {
+            bMaestroOkvir.BackColor = Color.Yellow;
+            if (bMasterOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bMasterOkvir.BackColor = Color.Transparent;
+            }
+            else if (bVisaOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bVisaOkvir.BackColor = Color.Transparent;
+            }
+            else if (bAmexOkvir.BackColor.Equals(Color.Yellow))
+            {
+                bAmexOkvir.BackColor = Color.Transparent;
+            }
+        }
     }
 }

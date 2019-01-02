@@ -43,6 +43,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bVisaOkvir = new System.Windows.Forms.Button();
+            this.bMasterOkvir = new System.Windows.Forms.Button();
+            this.bAmexOkvir = new System.Windows.Forms.Button();
+            this.bMaestroOkvir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,11 +55,13 @@
             this.b_visa.BackColor = System.Drawing.Color.Transparent;
             this.b_visa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("b_visa.BackgroundImage")));
             this.b_visa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.b_visa.Location = new System.Drawing.Point(105, 39);
+            this.b_visa.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.b_visa.Location = new System.Drawing.Point(103, 39);
             this.b_visa.Name = "b_visa";
             this.b_visa.Size = new System.Drawing.Size(98, 57);
             this.b_visa.TabIndex = 0;
             this.b_visa.UseVisualStyleBackColor = false;
+            this.b_visa.Click += new System.EventHandler(this.b_visa_Click);
             // 
             // b_mastercard
             // 
@@ -67,6 +73,7 @@
             this.b_mastercard.Size = new System.Drawing.Size(98, 57);
             this.b_mastercard.TabIndex = 1;
             this.b_mastercard.UseVisualStyleBackColor = false;
+            this.b_mastercard.Click += new System.EventHandler(this.b_mastercard_Click);
             // 
             // b_amex
             // 
@@ -78,6 +85,7 @@
             this.b_amex.Size = new System.Drawing.Size(98, 57);
             this.b_amex.TabIndex = 2;
             this.b_amex.UseVisualStyleBackColor = false;
+            this.b_amex.Click += new System.EventHandler(this.b_amex_Click);
             // 
             // b_maestro
             // 
@@ -89,6 +97,7 @@
             this.b_maestro.Size = new System.Drawing.Size(98, 57);
             this.b_maestro.TabIndex = 3;
             this.b_maestro.UseVisualStyleBackColor = false;
+            this.b_maestro.Click += new System.EventHandler(this.b_maestro_Click);
             // 
             // l_cnumber
             // 
@@ -208,12 +217,59 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // bVisaOkvir
+            // 
+            this.bVisaOkvir.BackColor = System.Drawing.Color.Transparent;
+            this.bVisaOkvir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bVisaOkvir.Location = new System.Drawing.Point(99, 34);
+            this.bVisaOkvir.Name = "bVisaOkvir";
+            this.bVisaOkvir.Size = new System.Drawing.Size(106, 67);
+            this.bVisaOkvir.TabIndex = 16;
+            this.bVisaOkvir.Text = "button1";
+            this.bVisaOkvir.UseVisualStyleBackColor = false;
+            // 
+            // bMasterOkvir
+            // 
+            this.bMasterOkvir.BackColor = System.Drawing.Color.Transparent;
+            this.bMasterOkvir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bMasterOkvir.Location = new System.Drawing.Point(218, 34);
+            this.bMasterOkvir.Name = "bMasterOkvir";
+            this.bMasterOkvir.Size = new System.Drawing.Size(106, 67);
+            this.bMasterOkvir.TabIndex = 17;
+            this.bMasterOkvir.Text = "button3";
+            this.bMasterOkvir.UseVisualStyleBackColor = false;
+            // 
+            // bAmexOkvir
+            // 
+            this.bAmexOkvir.BackColor = System.Drawing.Color.Transparent;
+            this.bAmexOkvir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bAmexOkvir.ForeColor = System.Drawing.Color.Black;
+            this.bAmexOkvir.Location = new System.Drawing.Point(335, 34);
+            this.bAmexOkvir.Name = "bAmexOkvir";
+            this.bAmexOkvir.Size = new System.Drawing.Size(106, 67);
+            this.bAmexOkvir.TabIndex = 18;
+            this.bAmexOkvir.Text = "button4";
+            this.bAmexOkvir.UseVisualStyleBackColor = false;
+            // 
+            // bMaestroOkvir
+            // 
+            this.bMaestroOkvir.BackColor = System.Drawing.Color.Transparent;
+            this.bMaestroOkvir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bMaestroOkvir.Location = new System.Drawing.Point(455, 34);
+            this.bMaestroOkvir.Name = "bMaestroOkvir";
+            this.bMaestroOkvir.Size = new System.Drawing.Size(106, 67);
+            this.bMaestroOkvir.TabIndex = 19;
+            this.bMaestroOkvir.Text = "button5";
+            this.bMaestroOkvir.UseVisualStyleBackColor = false;
+            // 
             // karticno_placanje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Program.Properties.Resources.images3;
             this.ClientSize = new System.Drawing.Size(682, 418);
+            this.Controls.Add(this.b_visa);
+            this.Controls.Add(this.bVisaOkvir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox3);
@@ -227,7 +283,9 @@
             this.Controls.Add(this.b_maestro);
             this.Controls.Add(this.b_amex);
             this.Controls.Add(this.b_mastercard);
-            this.Controls.Add(this.b_visa);
+            this.Controls.Add(this.bMasterOkvir);
+            this.Controls.Add(this.bAmexOkvir);
+            this.Controls.Add(this.bMaestroOkvir);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "karticno_placanje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -255,5 +313,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button bVisaOkvir;
+        private System.Windows.Forms.Button bMasterOkvir;
+        private System.Windows.Forms.Button bAmexOkvir;
+        private System.Windows.Forms.Button bMaestroOkvir;
     }
 }
