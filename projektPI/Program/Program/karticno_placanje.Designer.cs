@@ -47,9 +47,17 @@
             this.bMasterOkvir = new System.Windows.Forms.Button();
             this.bAmexOkvir = new System.Windows.Forms.Button();
             this.bMaestroOkvir = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // b_visa
@@ -120,12 +128,11 @@
             this.tbInputCNumb.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.tbInputCNumb.Location = new System.Drawing.Point(105, 180);
             this.tbInputCNumb.Name = "tbInputCNumb";
-            this.tbInputCNumb.Size = new System.Drawing.Size(255, 22);
+            this.tbInputCNumb.Size = new System.Drawing.Size(264, 22);
             this.tbInputCNumb.TabIndex = 6;
             this.tbInputCNumb.Text = " 1234 5678 9102 3456";
             this.tbInputCNumb.Click += new System.EventHandler(this.tbInputCNumb_Click);
-            this.tbInputCNumb.TextChanged += new System.EventHandler(this.tb_cardnumber_TextChanged);
-            this.tbInputCNumb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbInputCNumb_KeyPress);
+            this.tbInputCNumb.Leave += new System.EventHandler(this.tbInputCNumb_Leave);
             // 
             // tbInputName
             // 
@@ -134,11 +141,11 @@
             this.tbInputName.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.tbInputName.Location = new System.Drawing.Point(105, 233);
             this.tbInputName.Name = "tbInputName";
-            this.tbInputName.Size = new System.Drawing.Size(255, 22);
+            this.tbInputName.Size = new System.Drawing.Size(264, 22);
             this.tbInputName.TabIndex = 8;
             this.tbInputName.Text = " Ex. Leona Štrucelj";
             this.tbInputName.Click += new System.EventHandler(this.tbInputName_Click);
-            this.tbInputName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbInputName.Leave += new System.EventHandler(this.tbInputName_Leave);
             // 
             // label1
             // 
@@ -160,11 +167,11 @@
             this.tbInputExDate.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.tbInputExDate.Location = new System.Drawing.Point(105, 289);
             this.tbInputExDate.Name = "tbInputExDate";
-            this.tbInputExDate.Size = new System.Drawing.Size(110, 22);
+            this.tbInputExDate.Size = new System.Drawing.Size(109, 22);
             this.tbInputExDate.TabIndex = 10;
             this.tbInputExDate.Text = " 01/19";
             this.tbInputExDate.Click += new System.EventHandler(this.tbInputExDate_Click);
-            this.tbInputExDate.TextChanged += new System.EventHandler(this.tbInputExDate_TextChanged);
+            this.tbInputExDate.Leave += new System.EventHandler(this.tbInputExDate_Leave);
             // 
             // label2
             // 
@@ -183,21 +190,21 @@
             this.tbInputSeCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbInputSeCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbInputSeCode.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.tbInputSeCode.Location = new System.Drawing.Point(250, 289);
+            this.tbInputSeCode.Location = new System.Drawing.Point(260, 289);
             this.tbInputSeCode.Name = "tbInputSeCode";
-            this.tbInputSeCode.Size = new System.Drawing.Size(110, 22);
+            this.tbInputSeCode.Size = new System.Drawing.Size(109, 22);
             this.tbInputSeCode.TabIndex = 12;
             this.tbInputSeCode.Text = "012";
             this.tbInputSeCode.UseSystemPasswordChar = true;
             this.tbInputSeCode.Click += new System.EventHandler(this.tbInputSeCode_Click);
-            this.tbInputSeCode.TextChanged += new System.EventHandler(this.tbInputSeCode_TextChanged);
+            this.tbInputSeCode.Leave += new System.EventHandler(this.tbInputSeCode_Leave);
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(246, 266);
+            this.label3.Location = new System.Drawing.Point(256, 266);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 19);
             this.label3.TabIndex = 11;
@@ -272,23 +279,98 @@
             this.bMaestroOkvir.Text = "button5";
             this.bMaestroOkvir.UseVisualStyleBackColor = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(366, 180);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "label4";
-            // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(366, 233);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
+            this.label5.Location = new System.Drawing.Point(373, 171);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(30, 40);
             this.label5.TabIndex = 21;
-            this.label5.Text = "label5";
+            this.label5.Visible = false;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
+            this.label4.Location = new System.Drawing.Point(373, 171);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 40);
+            this.label4.TabIndex = 20;
+            this.label4.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(-23, -46);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
+            this.label6.Location = new System.Drawing.Point(373, 224);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 40);
+            this.label6.TabIndex = 23;
+            this.label6.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
+            this.label7.Location = new System.Drawing.Point(373, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 40);
+            this.label7.TabIndex = 24;
+            this.label7.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
+            this.label8.Location = new System.Drawing.Point(373, 281);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 40);
+            this.label8.TabIndex = 25;
+            this.label8.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Image = ((System.Drawing.Image)(resources.GetObject("label9.Image")));
+            this.label9.Location = new System.Drawing.Point(217, 281);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 40);
+            this.label9.TabIndex = 26;
+            this.label9.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
+            this.label10.Location = new System.Drawing.Point(373, 281);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(30, 40);
+            this.label10.TabIndex = 27;
+            this.label10.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
+            this.label11.Location = new System.Drawing.Point(217, 281);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(30, 40);
+            this.label11.TabIndex = 28;
+            this.label11.Visible = false;
             // 
             // karticno_placanje
             // 
@@ -296,6 +378,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Program.Properties.Resources.images3;
             this.ClientSize = new System.Drawing.Size(682, 418);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.b_visa);
@@ -321,7 +410,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menza TO GO";
             this.Load += new System.EventHandler(this.karticno_placanje_Load);
+            this.Click += new System.EventHandler(this.karticno_placanje_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,7 +438,14 @@
         private System.Windows.Forms.Button bMasterOkvir;
         private System.Windows.Forms.Button bAmexOkvir;
         private System.Windows.Forms.Button bMaestroOkvir;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

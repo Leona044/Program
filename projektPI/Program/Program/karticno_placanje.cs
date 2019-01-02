@@ -120,37 +120,9 @@ namespace Program
 
         private void tb_cardnumber_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tbInputCNumb.Text) || string.IsNullOrWhiteSpace(tbInputName.Text) || string.IsNullOrWhiteSpace(tbInputExDate.Text) || string.IsNullOrWhiteSpace(tbInputSeCode.Text))
-            {
-              //  MessageBox.Show("Nisu popunjena sva polja!", "Greška kod plaćanja!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                Regex r = new Regex("^([0-9]{4}\\s){3}[0-9]{4}");
-                Regex r2 = new Regex("^[0-9]{16}$");
-                String provjeriText = tbInputCNumb.Text;
-                if (provjeriText != ""){
-                    Boolean provjera = r.IsMatch(provjeriText);
-                    Boolean provjera2 = r2.IsMatch(provjeriText);
-                    if (provjera || provjera2)
-                    {
-                        //točno upisano
-                        label4.Text="Tocno!";
-                    }
-                    else
-                    {
-                        //netočno upisano
-                        label4.Text = "Netocno!";
-                    }
-                    //tbInputCNumb.Text.Remove(tbInputCNumb.Text.Length - 1);
-                }
-               
-
-
-
-            }
-
-        }        
+          }
+        
+        
 
         private void tbInputCNumb_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -162,6 +134,48 @@ namespace Program
             tbInputCNumb.Text = "";
             tbInputCNumb.ForeColor = Color.Black;
 
+        }
+        
+
+        private void tbInputName_Click(object sender, EventArgs e)
+        {
+            tbInputName.Text = "";
+            tbInputName.ForeColor = Color.Black;
+        }
+
+        private void tbInputExDate_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void tbInputExDate_Click(object sender, EventArgs e)
+        {
+            tbInputExDate.Text = "";
+            tbInputExDate.ForeColor = Color.Black;   
+        }
+
+        private void tbInputSeCode_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tbInputSeCode_Click(object sender, EventArgs e)
+        {
+            tbInputSeCode.Text = "";
+            tbInputSeCode.ForeColor = Color.Black;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void karticno_placanje_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbInputCNumb_Leave(object sender, EventArgs e)
+        {
             Regex r = new Regex("^([0-9]{4}\\s){3}[0-9]{4}");
             Regex r2 = new Regex("^[0-9]{16}$");
             String provjeriText = tbInputCNumb.Text;
@@ -172,52 +186,101 @@ namespace Program
                 if (provjera || provjera2)
                 {
                     //točno upisano
-                    label4.Text = "Tocno!";
+                    label5.Visible = false;
+                    label4.Visible = true;
                 }
                 else
                 {
                     //netočno upisano
-                    label4.Text = "Netocno!";
+                    label4.Visible = false;
+                    label5.Visible = true;
                 }
+
             }
-        }
-
-        private void tbInputName_Click(object sender, EventArgs e)
-        {
-            tbInputName.Text = "";
-            tbInputName.ForeColor = Color.Black;
-        }
-
-        private void tbInputExDate_TextChanged(object sender, EventArgs e)
-        {
+            if (provjeriText == "")
+            {
+                label4.Visible = false;
+                label5.Visible = true;
+            }
            
         }
 
-        private void tbInputExDate_Click(object sender, EventArgs e)
+        private void tbInputName_Leave(object sender, EventArgs e)
         {
-            tbInputExDate.Text = "";
-            tbInputExDate.ForeColor = Color.Black;
+            String provjeriText = tbInputName.Text;
+
+            if (provjeriText != "")
+            {
+                if (provjeriText.Contains(" "))
+                {
+                    //točno upisano
+                    label6.Visible = false;
+                    label7.Visible = true;
+                }
+                else
+                {
+                    //netočno upisano
+                    label7.Visible = false;
+                    label6.Visible = true;
+                }
+
+            }
+            if (provjeriText == "")
+            {
+                label7.Visible = false;
+                label6.Visible = true;
+            }
+        }
+
+        private void tbInputExDate_Leave(object sender, EventArgs e)
+        {
 
             Regex r = new Regex("^[0-9]{2}\\/[0-9]{2}");
             String provjeriText = tbInputExDate.Text;
+            string[] polje;
             if (provjeriText != "")
             {
                 Boolean provjera = r.IsMatch(provjeriText);
                 if (provjera)
                 {
                     //točno upisano
-                    label5.Text = "Tocno!";
+                    polje = provjeriText.Split('/');
+                    int mjesec = Convert.ToInt32(polje[0]);
+                    int godina = Convert.ToInt32(polje[1]);
+                    if (mjesec < 13)
+                    {
+                        if(godina > 18 && godina < 30)
+                        {
+                            label11.Visible = false;
+                            label9.Visible = true;
+                        }
+                        else
+                        {
+                            label9.Visible = false;
+                            label11.Visible = true;
+                        }
+                    }
+                    else
+                    {
+                        label9.Visible = false;
+                        label11.Visible = true;
+                    }
                 }
                 else
                 {
                     //netočno upisano
-                    label5.Text = "Netocno!";
+                    label9.Visible = false;
+                    label11.Visible = true;
                 }
-                //tbInputCNumb.Text.Remove(tbInputCNumb.Text.Length - 1);
+            }
+            if (provjeriText == "")
+            {
+                label9.Visible = false;
+                label11.Visible = true;
             }
         }
 
-        private void tbInputSeCode_TextChanged(object sender, EventArgs e)
+        private void tbInputSeCode_Leave(object sender, EventArgs e)
         {
             Regex r = new Regex("^[0-9]{3}$");
             String provjeriText = tbInputSeCode.Text;
@@ -227,21 +290,22 @@ namespace Program
                 if (provjera)
                 {
                     //točno upisano
-                    label5.Text = "Tocno!";
+                    label10.Visible = false;
+                    label8.Visible = true;
                 }
                 else
                 {
                     //netočno upisano
-                    label5.Text = "Netocno!";
+                    label8.Visible = false;
+                    label10.Visible = true;
                 }
-                //tbInputCNumb.Text.Remove(tbInputCNumb.Text.Length - 1);
-            }
-        }
 
-        private void tbInputSeCode_Click(object sender, EventArgs e)
-        {
-            tbInputSeCode.Text = "";
-            tbInputSeCode.ForeColor = Color.Black;
+            }
+            if (provjeriText == "")
+            {
+                label8.Visible = false;
+                label10.Visible = true;
+            }
         }
     }
 }
