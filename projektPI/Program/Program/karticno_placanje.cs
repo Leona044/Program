@@ -47,7 +47,23 @@ namespace Program
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new placanje_uspjesno().Show();
+            if(label4.Visible == true && label7.Visible == true && label9.Visible == true && label8.Visible == true)
+            {
+                if(bVisaOkvir.BackColor.Equals(Color.Yellow) || bMaestroOkvir.BackColor.Equals(Color.Yellow) || bMasterOkvir.BackColor.Equals(Color.Yellow) || bAmexOkvir.BackColor.Equals(Color.Yellow))
+                {
+                    new placanje_uspjesno().Show();
+                }
+                else
+                {
+                    MessageBox.Show("Odaberite vrstu kartice. Pokušajte ponovno.", "Greška kod plaćanja!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Neispravni unos podataka. Pokušajte ponovno.", "Greška kod plaćanja!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void b_visa_Click(object sender, EventArgs e)

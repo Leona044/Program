@@ -45,7 +45,7 @@ namespace Program
                 }
                 else
                 {
-                    MessageBox.Show("Korisnik ne postoji. Pokušajte ponovno.", "Greška kod prijave!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Krivo korisničko ime i/ili lozinka. Pokušajte ponovno.", "Greška kod prijave!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
  
