@@ -165,7 +165,7 @@ namespace Program
                 }
             }
 
-           double iznos = 0;
+           double iznos = 10;
             foreach (object j in listBox1.Items)
             {
                 if(j.Equals("Glavno jelo")) 
@@ -213,6 +213,17 @@ namespace Program
         private void clb_jela_Click(object sender, EventArgs e)
         {
             lblObavezanOdabir.Text = "";
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            label2.Visible = true;
+            
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            label2.Visible = false;
         }
     }
 }
