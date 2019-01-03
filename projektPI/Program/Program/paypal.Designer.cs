@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(paypal));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.l_paypal = new System.Windows.Forms.Label();
-            this.tb_password = new System.Windows.Forms.TextBox();
-            this.tb_cardnumber = new System.Windows.Forms.TextBox();
+            this.tbInputPass = new System.Windows.Forms.TextBox();
+            this.tbInputEm = new System.Windows.Forms.TextBox();
             this.l_or = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -64,28 +64,31 @@
             this.l_paypal.TabIndex = 6;
             this.l_paypal.Text = "Pay with PayPal";
             // 
-            // tb_password
+            // tbInputPass
             // 
-            this.tb_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_password.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.tb_password.Location = new System.Drawing.Point(226, 209);
-            this.tb_password.Margin = new System.Windows.Forms.Padding(5);
-            this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(212, 26);
-            this.tb_password.TabIndex = 10;
-            this.tb_password.Text = " Password";
+            this.tbInputPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbInputPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbInputPass.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbInputPass.Location = new System.Drawing.Point(226, 209);
+            this.tbInputPass.Margin = new System.Windows.Forms.Padding(5);
+            this.tbInputPass.Name = "tbInputPass";
+            this.tbInputPass.Size = new System.Drawing.Size(212, 26);
+            this.tbInputPass.TabIndex = 10;
+            this.tbInputPass.Text = " Password";
+            this.tbInputPass.UseSystemPasswordChar = true;
+            this.tbInputPass.Click += new System.EventHandler(this.tbInputPass_Click);
             // 
-            // tb_cardnumber
+            // tbInputEm
             // 
-            this.tb_cardnumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_cardnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_cardnumber.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.tb_cardnumber.Location = new System.Drawing.Point(226, 167);
-            this.tb_cardnumber.Name = "tb_cardnumber";
-            this.tb_cardnumber.Size = new System.Drawing.Size(212, 26);
-            this.tb_cardnumber.TabIndex = 9;
-            this.tb_cardnumber.Text = " Email";
+            this.tbInputEm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbInputEm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbInputEm.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbInputEm.Location = new System.Drawing.Point(226, 167);
+            this.tbInputEm.Name = "tbInputEm";
+            this.tbInputEm.Size = new System.Drawing.Size(212, 26);
+            this.tbInputEm.TabIndex = 9;
+            this.tbInputEm.Text = "Ex. lestruc123@gmail.com";
+            this.tbInputEm.Click += new System.EventHandler(this.tbInputEm_Click);
             // 
             // l_or
             // 
@@ -147,8 +150,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.l_or);
-            this.Controls.Add(this.tb_password);
-            this.Controls.Add(this.tb_cardnumber);
+            this.Controls.Add(this.tbInputPass);
+            this.Controls.Add(this.tbInputEm);
             this.Controls.Add(this.l_paypal);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -167,8 +170,8 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label l_paypal;
-        private System.Windows.Forms.TextBox tb_password;
-        private System.Windows.Forms.TextBox tb_cardnumber;
+        private System.Windows.Forms.TextBox tbInputPass;
+        private System.Windows.Forms.TextBox tbInputEm;
         private System.Windows.Forms.Label l_or;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button1;

@@ -106,7 +106,6 @@
             this.video.Size = new System.Drawing.Size(315, 230);
             this.video.TabIndex = 5;
             this.video.Enter += new System.EventHandler(this.Video_Enter);
-            this.video.Leave += new System.EventHandler(this.B_prijava_Click);
             // 
             // prijava
             // 

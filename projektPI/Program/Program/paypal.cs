@@ -43,8 +43,34 @@ namespace Program
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new placanje_uspjesno().Show();
+            prijava prijava = new prijava();
+            string email = tbInputEm.Text;
+            string lozinka = tbInputPass.Text;
+
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(lozinka))
+            {
+                MessageBox.Show("Email i/ili lozinka nisu uneseni. Pokušajte ponovno.", "Greška kod prijave!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbInputEm.Clear();
+                tbInputPass.Clear();
+            }
+            else
+            {
+                 new placanje_uspjesno().Show();   
+            }
+
             
+        }
+
+        private void tbInputEm_Click(object sender, EventArgs e)
+        {
+            tbInputEm.Text = "";
+            tbInputEm.ForeColor = Color.Black;
+        }
+
+        private void tbInputPass_Click(object sender, EventArgs e)
+        {
+            tbInputPass.Text = "";
+            tbInputPass.ForeColor = Color.Black;
         }
     }
 }

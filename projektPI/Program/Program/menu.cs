@@ -15,6 +15,7 @@ namespace Program
         public menu()
         {
             InitializeComponent();
+
         }
 
         decimal iznosKucica = 0;

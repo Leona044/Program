@@ -23,7 +23,7 @@ namespace Program
 
         private void B_prijava_Click(object sender, EventArgs e)
         {
-
+        
             prijava prijava = new prijava();
             string email = inputEmail.Text;
             string lozinka = inputLozinka.Text;
@@ -39,7 +39,8 @@ namespace Program
                 List<Korisnik> upisano = BPkorisnik.DohvatiPrijava(email, lozinka);
                 if (upisano.Count > 0)
                 {
-                    new menu().Show();
+                   
+                    new menu().Show(); 
                     this.Hide();
                     video.Ctlcontrols.stop();
                 }
@@ -47,8 +48,9 @@ namespace Program
                 {
                     MessageBox.Show("Krivo korisničko ime i/ili lozinka. Pokušajte ponovno.", "Greška kod prijave!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+               
             }
- 
+
         }
 
         private void Video_Enter(object sender, EventArgs e)

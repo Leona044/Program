@@ -17,7 +17,7 @@ namespace Program
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new karticno_placanje());
+            Application.Run(new paypal());
 
 
 
