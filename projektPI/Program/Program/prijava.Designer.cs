@@ -34,8 +34,10 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLozinka = new System.Windows.Forms.Label();
             this.btnPrijava = new System.Windows.Forms.Button();
-            this.video = new AxWMPLib.AxWindowsMediaPlayer();
-            ((System.ComponentModel.ISupportInitialize)(this.video)).BeginInit();
+            this.axShockwaveFlash1 = new AxShockwaveFlashObjects.AxShockwaveFlash();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlash1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // inputEmail
@@ -94,18 +96,23 @@
             this.btnPrijava.UseVisualStyleBackColor = true;
             this.btnPrijava.Click += new System.EventHandler(this.B_prijava_Click);
             // 
-            // video
+            // axShockwaveFlash1
             // 
-            this.video.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.video.Enabled = true;
-            this.video.Location = new System.Drawing.Point(12, 97);
-            this.video.Name = "video";
-            this.video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("video.OcxState")));
-            this.video.Size = new System.Drawing.Size(315, 230);
-            this.video.TabIndex = 5;
-            this.video.Enter += new System.EventHandler(this.Video_Enter);
+            this.axShockwaveFlash1.Enabled = true;
+            this.axShockwaveFlash1.Location = new System.Drawing.Point(548, 424);
+            this.axShockwaveFlash1.Name = "axShockwaveFlash1";
+            this.axShockwaveFlash1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlash1.OcxState")));
+            this.axShockwaveFlash1.Size = new System.Drawing.Size(192, 192);
+            this.axShockwaveFlash1.TabIndex = 6;
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(12, 97);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(315, 230);
+            this.axWindowsMediaPlayer1.TabIndex = 7;
             // 
             // prijava
             // 
@@ -113,7 +120,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Program.Properties.Resources.images3;
             this.ClientSize = new System.Drawing.Size(682, 418);
-            this.Controls.Add(this.video);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.axShockwaveFlash1);
             this.Controls.Add(this.btnPrijava);
             this.Controls.Add(this.lblLozinka);
             this.Controls.Add(this.lblEmail);
@@ -123,7 +131,8 @@
             this.Name = "prijava";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menza TO GO";
-            ((System.ComponentModel.ISupportInitialize)(this.video)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlash1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,7 +145,8 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblLozinka;
         private System.Windows.Forms.Button btnPrijava;
-        private AxWMPLib.AxWindowsMediaPlayer video;
+        private AxShockwaveFlashObjects.AxShockwaveFlash axShockwaveFlash1;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }
 

@@ -16,5 +16,19 @@ namespace Program
         {
             InitializeComponent();
         }
+
+        
+        private void placanje_uspjesno_Load(object sender, EventArgs e)
+        {
+            DateTime datum = DateTime.Now;
+            string datumVracanja = datum.ToString("dd.MM.yyyy, HH:mm");
+            lblInputVrijeme.Text = datumVracanja;
+
+        }
+
+        private void lblIznos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

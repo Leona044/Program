@@ -97,7 +97,9 @@ namespace WindowsFormsApp1
             {
                 b_online.BackColor = Color.WhiteSmoke;
             }
-  
+
+            new placanje_uspjesno().Show();
+            this.Hide();
         }
 
 

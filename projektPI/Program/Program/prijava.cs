@@ -42,7 +42,7 @@ namespace Program
                    
                     new menu().Show(); 
                     this.Hide();
-                    video.Ctlcontrols.stop();
+                    axWindowsMediaPlayer1.Ctlcontrols.stop();
                 }
                 else
                 {
@@ -55,7 +55,7 @@ namespace Program
 
         private void Video_Enter(object sender, EventArgs e)
         {
-
+           
         }
 
         private void inputEmail_TextChanged(object sender, EventArgs e)
