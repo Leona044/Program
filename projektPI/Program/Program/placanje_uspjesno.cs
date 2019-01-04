@@ -28,6 +28,7 @@ namespace Program
             string datumVracanja = datum.ToString("dd.MM.yyyy, HH:mm");
             lblInputVrijeme.Text = datumVracanja;
             lblInputIznos.Text = novaNarudzba.Iznos.ToString();
+            lblInputIznos.Text += "kn";
             lblInputNacin.Text = novaNarudzba.Nacin_placanja.ToString();
             lblInputStatus.Text = novaNarudzba.Status.ToString();
             lblMobi.Text = novaNarudzba.Broj_mobitela.ToString();
@@ -35,7 +36,7 @@ namespace Program
             lblInputOpis.Text = novaNarudzba.Sadrzaj.ToString();
             lblInputKol.Text = novaNarudzba.Kolicina.ToString();
             lblInputBr.Text = BPnarudzba.DohvatiBroj().ToString();
-           // BPnarudzba.Spremi(novaNarudzba);
+            BPnarudzba.Spremi(novaNarudzba);
 
         }
 

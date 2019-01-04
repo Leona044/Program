@@ -12,8 +12,8 @@ namespace Program
 
             SQLiteCommand command = BP.konekcija.CreateCommand();
 
-            command.CommandText = String.Format(@"Insert into narudzba (iznos, status, jmbag_k, kolicina, menu, sadrzaj, adresa, broj_mobitela, nacin_placanja) Values ('{0}', '{1}', '{2}', '{3}','{4}', '{5}', '{6}', '{7}', '{8}'",
-                                                n.Iznos, n.Status, pomocna.trenutni.Jmbag, n.Kolicina, n.Menu, n.Sadrzaj, n.Adresa, n.Broj_mobitela, n.Nacin_placanja);
+            command.CommandText = String.Format("Insert into Narudzba (menu, sadrzaj, iznos, status, id_k, kolicina, adresa, broj_mobitela, nacin_placanja) Values ('{0}', '{1}', '{2}', '{3}','{4}', '{5}', '{6}', '{7}', '{8}')",
+                                                n.Menu, n.Sadrzaj, n.Iznos, n.Status, n.Jmbag_k, n.Kolicina, n.Adresa, n.Broj_mobitela, n.Nacin_placanja);
 
             command.ExecuteNonQuery();
 

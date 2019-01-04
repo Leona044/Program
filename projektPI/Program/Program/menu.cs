@@ -93,7 +93,7 @@ namespace Program
                 string iznosKn = metroTextBox1.Text.ToString();
                 string iznosBezKn = iznosKn.Replace("kn", "");
                 novaNarudzba.Iznos = Convert.ToDouble(iznosBezKn);
-                novaNarudzba.Adresa = textBox1.ToString();
+                novaNarudzba.Adresa = textBox1.Text.ToString();
                 novaNarudzba.Jmbag_k = prijavljeniKorisnik.Jmbag;
                 novaNarudzba.Broj_mobitela = tbInputBrmob.Text.ToString();
                 new potvrda(this, novaNarudzba, prijavljeniKorisnik).Show();
