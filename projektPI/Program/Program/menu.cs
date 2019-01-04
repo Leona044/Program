@@ -12,10 +12,14 @@ namespace Program
 {
     public partial class menu : Form
     {
-        public menu()
+        Korisnik prijavljeniKorisnik = new Korisnik();
+        Narudzba novaNarudzba = new Narudzba();
+        string opis = "";
+
+        public menu(Korisnik korisnikLogin)
         {
             InitializeComponent();
-
+            prijavljeniKorisnik = korisnikLogin;
         }
 
         decimal iznosKucica = 0;
@@ -79,7 +83,22 @@ namespace Program
                 lblUpisObavezan.ForeColor = Color.Red; 
             }
             else
-                 new potvrda(this).Show();
+            {
+                foreach (object j in listBox1.Items)
+                {
+                    novaNarudzba.Sadrzaj += j.ToString();
+                    novaNarudzba.Sadrzaj += " | ";
+                }
+                novaNarudzba.Kolicina = Convert.ToInt32(NUD_kolicina.Value.ToString());
+                string iznosKn = metroTextBox1.ToString();
+                string iznosBezKn = iznosKn.Replace("kn", "");
+                novaNarudzba.Iznos = Convert.ToDouble(iznosBezKn);
+                novaNarudzba.Adresa = textBox1.ToString();
+                novaNarudzba.Jmbag_k = prijavljeniKorisnik.Jmbag;
+                novaNarudzba.Broj_mobitela = tbInputBrmob.ToString();
+                new potvrda(this, novaNarudzba, prijavljeniKorisnik).Show();
+            }
+                
     
         }
 
@@ -111,6 +130,7 @@ namespace Program
             }
             Control o = (Control)sender;
             o.BackColor = Color.Yellow;
+            novaNarudzba.Menu = "Menu 1";
 
         }  
 
@@ -122,6 +142,7 @@ namespace Program
             }
             Control o = (Control)sender;
             o.BackColor = Color.Yellow;
+            novaNarudzba.Menu = "Menu 2";
 
         }
 
@@ -133,6 +154,7 @@ namespace Program
             }
             Control o = (Control)sender;
             o.BackColor = Color.Yellow;
+            novaNarudzba.Menu = "Vege";
         }
 
         private void NUD_kolicina_ValueChanged(object sender, EventArgs e)
@@ -224,6 +246,21 @@ namespace Program
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             label2.Visible = false;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

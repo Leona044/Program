@@ -12,8 +12,8 @@ namespace Program
 
             SQLiteCommand command = BP.konekcija.CreateCommand();
 
-            command.CommandText = String.Format(@"Insert into narudzba (opis, iznos, status, jmbag_k) Values ('{0}', '{1}', '{2}', '{3}')",
-                                                n.Opis, n.Iznos, n.Status, pomocna.trenutni.Jmbag);
+            command.CommandText = String.Format(@"Insert into narudzba (iznos, status, jmbag_k, kolicina, menu, sadrzaj, adresa, broj_mobitela, nacin_placanja) Values ('{0}', '{1}', '{2}', '{3}','{4}', '{5}', '{6}', '{7}', '{8}'",
+                                                n.Iznos, n.Status, pomocna.trenutni.Jmbag, n.Kolicina, n.Menu, n.Sadrzaj, n.Adresa, n.Broj_mobitela, n.Nacin_placanja);
 
             command.ExecuteNonQuery();
 
@@ -55,9 +55,14 @@ namespace Program
 
                 n.Jmbag_k = Convert.ToInt32(reader["id_k"]);
                 n.Id = Convert.ToInt32(reader["id_n"]);
-                n.Opis = (string)reader["opis"];
                 n.Iznos = Convert.ToDouble(reader["iznos"]);
                 n.Status = (string)reader["status"];
+                n.Kolicina = Convert.ToInt32(reader["kolicina"]);
+                n.Menu = (string)reader["menu"];
+                n.Sadrzaj = (string)reader["sadrzaj"];
+                n.Adresa = (string)reader["adresa"];
+                n.Broj_mobitela = (string)reader["broj_mobitela"];
+                n.Nacin_placanja = (string)reader["nacin placanja"];
 
                 lista.Add(n);
             }
@@ -68,6 +73,30 @@ namespace Program
             BP.zatvoriKonekciju();
 
             return lista;
+        }
+
+        public static int DohvatiBroj()
+        {
+            int broj = 0;
+            BP.otvoriKonekciju();
+
+            SQLiteCommand command = BP.konekcija.CreateCommand();
+
+            command.CommandText = String.Format("Select * from narudzba");
+
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                broj++;
+            }
+
+            reader.Dispose();
+            command.Dispose();
+
+            BP.zatvoriKonekciju();
+
+            return broj;
         }
 
         public static List<Narudzba> Dohvati(string status)
@@ -88,9 +117,15 @@ namespace Program
 
                 n.Jmbag_k = Convert.ToInt32(reader["id_k"]);
                 n.Id = Convert.ToInt32(reader["id_n"]);
-                n.Opis = (string)reader["opis"];
                 n.Iznos = Convert.ToDouble(reader["iznos"]);
                 n.Status = (string)reader["status"];
+                n.Kolicina = Convert.ToInt32(reader["kolicina"]);
+                n.Menu = (string)reader["menu"];
+                n.Sadrzaj = (string)reader["sadrzaj"];
+                n.Adresa = (string)reader["adresa"];
+                n.Broj_mobitela = (string)reader["broj_mobitela"];
+                n.Nacin_placanja = (string)reader["nacin placanja"];
+
 
                 lista.Add(n);
             }

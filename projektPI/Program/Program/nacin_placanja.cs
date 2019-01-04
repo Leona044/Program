@@ -13,9 +13,13 @@ namespace WindowsFormsApp1
 {
     public partial class nacinplacanja : Form
     {
-        public nacinplacanja()
+        Narudzba novaNarudzba = null;
+        Korisnik prijavljeniKorisnik = null;
+        public nacinplacanja(Narudzba novaNarudzba, Korisnik prijavljeniKorisnik)
         {
             InitializeComponent();
+            this.novaNarudzba = novaNarudzba;
+            this.prijavljeniKorisnik = prijavljeniKorisnik;
         }
 
         int t1 = 46;
@@ -74,19 +78,21 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new karticno_placanje().Show();
+            novaNarudzba.Nacin_placanja = "Online - Kartično";
+            new karticno_placanje(novaNarudzba, prijavljeniKorisnik).Show();
             this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            new paypal().Show();
+            novaNarudzba.Nacin_placanja = "Online - Paypal";
+            new paypal(novaNarudzba, prijavljeniKorisnik).Show();
             this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            new menu().Show();
+            new menu(prijavljeniKorisnik).Show();
             this.Hide();
         }
 
@@ -97,8 +103,8 @@ namespace WindowsFormsApp1
             {
                 b_online.BackColor = Color.WhiteSmoke;
             }
-
-            new placanje_uspjesno().Show();
+            novaNarudzba.Nacin_placanja = "Gotovinsko";
+            new placanje_uspjesno(novaNarudzba, prijavljeniKorisnik).Show();
             this.Hide();
         }
 

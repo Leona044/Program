@@ -37,10 +37,14 @@ namespace Program
             else
             {
                 List<Korisnik> upisano = BPkorisnik.DohvatiPrijava(email, lozinka);
+                Korisnik korisnikLogin = new Korisnik();
                 if (upisano.Count > 0)
                 {
-                   
-                    new menu().Show(); 
+                   for (int i = 0; i < upisano.Count; i++)
+                    {
+                        korisnikLogin = upisano.ElementAt<Korisnik>(i);
+                    }
+                    new menu(korisnikLogin).Show(); 
                     this.Hide();
                     axWindowsMediaPlayer1.Ctlcontrols.stop();
                 }

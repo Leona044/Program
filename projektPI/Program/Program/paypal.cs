@@ -11,11 +11,16 @@ using WindowsFormsApp1;
 
 namespace Program
 {
+    
     public partial class paypal : Form
     {
-        public paypal()
+        Korisnik prijavljeniKorisnik = null;
+        Narudzba novaNarudzba = null;
+        public paypal(Narudzba novaNarudzba, Korisnik prijavljeniKorisnik)
         {
             InitializeComponent();
+            this.novaNarudzba = novaNarudzba;
+            this.prijavljeniKorisnik = prijavljeniKorisnik;
         }
 
         private void tb_loginpaypal_TextChanged(object sender, EventArgs e)
@@ -31,19 +36,19 @@ namespace Program
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            new nacinplacanja().Show();
+            new nacinplacanja(novaNarudzba, prijavljeniKorisnik).Show();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new karticno_placanje().Show();
+            new karticno_placanje(novaNarudzba, prijavljeniKorisnik).Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            prijava prijava = new prijava();
+            //prijava prijava = new prijava();
             string email = tbInputEm.Text;
             string lozinka = tbInputPass.Text;
 
@@ -55,7 +60,7 @@ namespace Program
             }
             else
             {
-                 new placanje_uspjesno().Show();   
+                 new placanje_uspjesno(novaNarudzba, prijavljeniKorisnik).Show();   
             }
 
             

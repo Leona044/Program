@@ -37,6 +37,7 @@
             this.b_menu2 = new System.Windows.Forms.Button();
             this.b_menu1 = new System.Windows.Forms.Button();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblObavezanOdabir = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -50,14 +51,16 @@
             this.lblUpisObavezan = new System.Windows.Forms.Label();
             this.lbl_upisiadresu = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblBrojmob = new System.Windows.Forms.Label();
+            this.tbInputBrmob = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_kolicina)).BeginInit();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.mp_adresaupis.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // B_kolicina
@@ -184,7 +187,7 @@
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(0, 115);
+            this.metroPanel2.Location = new System.Drawing.Point(0, 108);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(365, 249);
             this.metroPanel2.TabIndex = 11;
@@ -192,6 +195,19 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             this.metroPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel2_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(342, 207);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(19, 16);
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // lblObavezanOdabir
             // 
@@ -314,7 +330,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(150, 22);
+            this.textBox1.Location = new System.Drawing.Point(150, 10);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(192, 20);
             this.textBox1.TabIndex = 17;
@@ -327,6 +343,9 @@
             this.mp_adresaupis.BackColor = System.Drawing.Color.DarkGray;
             this.mp_adresaupis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mp_adresaupis.BackgroundImage")));
             this.mp_adresaupis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mp_adresaupis.Controls.Add(this.label3);
+            this.mp_adresaupis.Controls.Add(this.lblBrojmob);
+            this.mp_adresaupis.Controls.Add(this.tbInputBrmob);
             this.mp_adresaupis.Controls.Add(this.lblUpisObavezan);
             this.mp_adresaupis.Controls.Add(this.lbl_upisiadresu);
             this.mp_adresaupis.Controls.Add(this.textBox1);
@@ -334,9 +353,9 @@
             this.mp_adresaupis.HorizontalScrollbarBarColor = true;
             this.mp_adresaupis.HorizontalScrollbarHighlightOnWheel = false;
             this.mp_adresaupis.HorizontalScrollbarSize = 10;
-            this.mp_adresaupis.Location = new System.Drawing.Point(0, 363);
+            this.mp_adresaupis.Location = new System.Drawing.Point(0, 354);
             this.mp_adresaupis.Name = "mp_adresaupis";
-            this.mp_adresaupis.Size = new System.Drawing.Size(365, 55);
+            this.mp_adresaupis.Size = new System.Drawing.Size(365, 64);
             this.mp_adresaupis.TabIndex = 18;
             this.mp_adresaupis.VerticalScrollbarBarColor = true;
             this.mp_adresaupis.VerticalScrollbarHighlightOnWheel = false;
@@ -346,7 +365,7 @@
             // 
             this.lblUpisObavezan.AutoSize = true;
             this.lblUpisObavezan.BackColor = System.Drawing.Color.Transparent;
-            this.lblUpisObavezan.Location = new System.Drawing.Point(177, 6);
+            this.lblUpisObavezan.Location = new System.Drawing.Point(177, -6);
             this.lblUpisObavezan.Name = "lblUpisObavezan";
             this.lblUpisObavezan.Size = new System.Drawing.Size(0, 13);
             this.lblUpisObavezan.TabIndex = 19;
@@ -356,7 +375,7 @@
             this.lbl_upisiadresu.AutoSize = true;
             this.lbl_upisiadresu.BackColor = System.Drawing.Color.Transparent;
             this.lbl_upisiadresu.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_upisiadresu.Location = new System.Drawing.Point(10, 25);
+            this.lbl_upisiadresu.Location = new System.Drawing.Point(10, 13);
             this.lbl_upisiadresu.Name = "lbl_upisiadresu";
             this.lbl_upisiadresu.Size = new System.Drawing.Size(134, 14);
             this.lbl_upisiadresu.TabIndex = 18;
@@ -375,18 +394,37 @@
             this.label2.Text = "Dostava uključena u cijenu!";
             this.label2.Visible = false;
             // 
-            // pictureBox2
+            // label3
             // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(342, 207);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(19, 16);
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(177, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // lblBrojmob
+            // 
+            this.lblBrojmob.AutoSize = true;
+            this.lblBrojmob.BackColor = System.Drawing.Color.Transparent;
+            this.lblBrojmob.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrojmob.Location = new System.Drawing.Point(10, 38);
+            this.lblBrojmob.Name = "lblBrojmob";
+            this.lblBrojmob.Size = new System.Drawing.Size(124, 14);
+            this.lblBrojmob.TabIndex = 21;
+            this.lblBrojmob.Text = "Upiši broj mobitela:";
+            this.lblBrojmob.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // tbInputBrmob
+            // 
+            this.tbInputBrmob.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbInputBrmob.Location = new System.Drawing.Point(150, 35);
+            this.tbInputBrmob.Name = "tbInputBrmob";
+            this.tbInputBrmob.Size = new System.Drawing.Size(192, 20);
+            this.tbInputBrmob.TabIndex = 20;
+            this.tbInputBrmob.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbInputBrmob.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // menu
             // 
@@ -410,11 +448,11 @@
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.mp_adresaupis.ResumeLayout(false);
             this.mp_adresaupis.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,5 +481,8 @@
         private System.Windows.Forms.Label lblObavezanOdabir;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblBrojmob;
+        private System.Windows.Forms.TextBox tbInputBrmob;
     }
 }

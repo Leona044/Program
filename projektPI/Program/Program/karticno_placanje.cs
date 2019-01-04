@@ -14,9 +14,13 @@ namespace Program
 {
     public partial class karticno_placanje : Form
     {
-        public karticno_placanje()
+        Korisnik prijavljeniKorisnik = null;
+        Narudzba novaNarudzba = null;
+        public karticno_placanje(Narudzba novaNarudzba, Korisnik prijavljeniKorisnik)
         {
             InitializeComponent();
+            this.novaNarudzba = novaNarudzba;
+            this.prijavljeniKorisnik = prijavljeniKorisnik;
         }
 
         private void metroTextBox1_Click(object sender, EventArgs e)
@@ -41,7 +45,7 @@ namespace Program
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            new nacinplacanja().Show();
+            new nacinplacanja(novaNarudzba, prijavljeniKorisnik).Show();
             this.Hide();
         }
 
@@ -51,7 +55,7 @@ namespace Program
             {
                 if(bVisaOkvir.BackColor.Equals(Color.Yellow) || bMaestroOkvir.BackColor.Equals(Color.Yellow) || bMasterOkvir.BackColor.Equals(Color.Yellow) || bAmexOkvir.BackColor.Equals(Color.Yellow))
                 {
-                    new placanje_uspjesno().Show();
+                    new placanje_uspjesno(novaNarudzba, prijavljeniKorisnik).Show();
                 }
                 else
                 {

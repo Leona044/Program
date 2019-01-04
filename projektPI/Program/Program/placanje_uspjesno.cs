@@ -12,9 +12,13 @@ namespace Program
 {
     public partial class placanje_uspjesno : Form
     {
-        public placanje_uspjesno()
+        Korisnik prijavljeniKorisnik = null;
+        Narudzba novaNarudzba = null;
+        public placanje_uspjesno(Narudzba novaNarudzba, Korisnik prijavljeniKorisnik)
         {
             InitializeComponent();
+            this.novaNarudzba = novaNarudzba;
+            this.prijavljeniKorisnik = prijavljeniKorisnik;
         }
 
         
@@ -23,6 +27,12 @@ namespace Program
             DateTime datum = DateTime.Now;
             string datumVracanja = datum.ToString("dd.MM.yyyy, HH:mm");
             lblInputVrijeme.Text = datumVracanja;
+            lblInputIznos.Text = novaNarudzba.Iznos.ToString();
+            lblInputNacin.Text = novaNarudzba.Nacin_placanja.ToString();
+            lblInputStatus.Text = novaNarudzba.Status.ToString();
+            lblMobi.Text = novaNarudzba.Broj_mobitela.ToString();
+            lblInputBr.Text = BPnarudzba.DohvatiBroj().ToString();
+           // BPnarudzba.Spremi(novaNarudzba);
 
         }
 

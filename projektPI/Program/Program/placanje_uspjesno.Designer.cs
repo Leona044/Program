@@ -42,6 +42,8 @@
             this.lblInputBr = new System.Windows.Forms.Label();
             this.lblInputNacin = new System.Windows.Forms.Label();
             this.lblNacPl = new System.Windows.Forms.Label();
+            this.lblMobi = new System.Windows.Forms.Label();
+            this.lblBrojmobit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,6 +191,28 @@
             this.lblNacPl.TabIndex = 13;
             this.lblNacPl.Text = "Način plaćanja: ";
             // 
+            // lblMobi
+            // 
+            this.lblMobi.AutoSize = true;
+            this.lblMobi.BackColor = System.Drawing.Color.Transparent;
+            this.lblMobi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMobi.Location = new System.Drawing.Point(147, 267);
+            this.lblMobi.Name = "lblMobi";
+            this.lblMobi.Size = new System.Drawing.Size(31, 16);
+            this.lblMobi.TabIndex = 16;
+            this.lblMobi.Text = "brm";
+            // 
+            // lblBrojmobit
+            // 
+            this.lblBrojmobit.AutoSize = true;
+            this.lblBrojmobit.BackColor = System.Drawing.Color.Transparent;
+            this.lblBrojmobit.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrojmobit.Location = new System.Drawing.Point(50, 266);
+            this.lblBrojmobit.Name = "lblBrojmobit";
+            this.lblBrojmobit.Size = new System.Drawing.Size(100, 19);
+            this.lblBrojmobit.TabIndex = 15;
+            this.lblBrojmobit.Text = "Broj mobitela:";
+            // 
             // placanje_uspjesno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,6 +221,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(468, 294);
+            this.Controls.Add(this.lblMobi);
+            this.Controls.Add(this.lblBrojmobit);
             this.Controls.Add(this.lblInputNacin);
             this.Controls.Add(this.lblNacPl);
             this.Controls.Add(this.lblInputBr);
@@ -237,5 +263,7 @@
         private System.Windows.Forms.Label lblInputBr;
         private System.Windows.Forms.Label lblInputNacin;
         private System.Windows.Forms.Label lblNacPl;
+        private System.Windows.Forms.Label lblMobi;
+        private System.Windows.Forms.Label lblBrojmobit;
     }
 }

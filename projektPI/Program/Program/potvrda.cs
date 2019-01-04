@@ -14,10 +14,14 @@ namespace Program
     public partial class potvrda : Form
     {
         menu menu = null;
-        public potvrda(menu menu)
+        Narudzba novaNarudzba = null;
+        Korisnik prijavljeniKorisnik = null;
+        public potvrda(menu menu, Narudzba novaNarudzba, Korisnik prijavljeniKorisnik)
         {
             InitializeComponent();
             this.menu = menu;
+            this.novaNarudzba = novaNarudzba;
+            this.prijavljeniKorisnik = prijavljeniKorisnik;
 
         }
 
@@ -28,7 +32,7 @@ namespace Program
 
         private void btnPotvrda_Click(object sender, EventArgs e)
         {
-            new nacinplacanja().Show();
+            new nacinplacanja(novaNarudzba, prijavljeniKorisnik).Show();
             this.Hide();
             menu.Hide();
 
