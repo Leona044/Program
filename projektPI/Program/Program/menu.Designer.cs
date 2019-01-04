@@ -53,7 +53,6 @@
             this.lblUpisObavezan = new System.Windows.Forms.Label();
             this.lbl_upisiadresu = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_kolicina)).BeginInit();
             this.metroPanel1.SuspendLayout();
@@ -190,7 +189,7 @@
             this.metroPanel2.HorizontalScrollbarSize = 10;
             this.metroPanel2.Location = new System.Drawing.Point(0, 108);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(365, 249);
+            this.metroPanel2.Size = new System.Drawing.Size(365, 253);
             this.metroPanel2.TabIndex = 11;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
@@ -296,7 +295,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(150, 10);
+            this.textBox1.Location = new System.Drawing.Point(150, 11);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(192, 20);
             this.textBox1.TabIndex = 17;
@@ -319,9 +318,9 @@
             this.mp_adresaupis.HorizontalScrollbarBarColor = true;
             this.mp_adresaupis.HorizontalScrollbarHighlightOnWheel = false;
             this.mp_adresaupis.HorizontalScrollbarSize = 10;
-            this.mp_adresaupis.Location = new System.Drawing.Point(0, 354);
+            this.mp_adresaupis.Location = new System.Drawing.Point(0, 351);
             this.mp_adresaupis.Name = "mp_adresaupis";
-            this.mp_adresaupis.Size = new System.Drawing.Size(365, 64);
+            this.mp_adresaupis.Size = new System.Drawing.Size(365, 67);
             this.mp_adresaupis.TabIndex = 18;
             this.mp_adresaupis.VerticalScrollbarBarColor = true;
             this.mp_adresaupis.VerticalScrollbarHighlightOnWheel = false;
@@ -331,7 +330,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(177, 19);
+            this.label3.Location = new System.Drawing.Point(177, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 22;
@@ -342,7 +341,7 @@
             this.lblBrojmob.AutoSize = true;
             this.lblBrojmob.BackColor = System.Drawing.Color.Transparent;
             this.lblBrojmob.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrojmob.Location = new System.Drawing.Point(10, 38);
+            this.lblBrojmob.Location = new System.Drawing.Point(10, 41);
             this.lblBrojmob.Name = "lblBrojmob";
             this.lblBrojmob.Size = new System.Drawing.Size(124, 14);
             this.lblBrojmob.TabIndex = 21;
@@ -352,7 +351,7 @@
             // tbInputBrmob
             // 
             this.tbInputBrmob.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbInputBrmob.Location = new System.Drawing.Point(150, 35);
+            this.tbInputBrmob.Location = new System.Drawing.Point(150, 38);
             this.tbInputBrmob.Name = "tbInputBrmob";
             this.tbInputBrmob.Size = new System.Drawing.Size(192, 20);
             this.tbInputBrmob.TabIndex = 20;
@@ -373,7 +372,7 @@
             this.lbl_upisiadresu.AutoSize = true;
             this.lbl_upisiadresu.BackColor = System.Drawing.Color.Transparent;
             this.lbl_upisiadresu.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_upisiadresu.Location = new System.Drawing.Point(10, 13);
+            this.lbl_upisiadresu.Location = new System.Drawing.Point(10, 14);
             this.lbl_upisiadresu.Name = "lbl_upisiadresu";
             this.lbl_upisiadresu.Size = new System.Drawing.Size(134, 14);
             this.lbl_upisiadresu.TabIndex = 18;
@@ -385,19 +384,12 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(366, 323);
+            this.label2.Location = new System.Drawing.Point(368, 315);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 15);
             this.label2.TabIndex = 19;
             this.label2.Text = "Dostava uključena u cijenu!";
             this.label2.Visible = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(532, 218);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 20;
             // 
             // metroTextBox1
             // 
@@ -440,7 +432,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Program.Properties.Resources.images3;
             this.ClientSize = new System.Drawing.Size(682, 418);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.mp_adresaupis);
             this.Controls.Add(this.b_ponuda);
             this.Controls.Add(this.pictureBox4);
@@ -493,6 +484,5 @@
         private System.Windows.Forms.Label lblBrojmob;
         private System.Windows.Forms.TextBox tbInputBrmob;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private System.Windows.Forms.TextBox textBox2;
     }
 }

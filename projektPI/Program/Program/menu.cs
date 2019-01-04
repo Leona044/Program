@@ -165,7 +165,7 @@ namespace Program
 
         public void izracunaj()
         {
-            decimal konacno = NUD_kolicina.Value * iznosKucica;
+            decimal konacno = (NUD_kolicina.Value * iznosKucica) + 10;
             string str = konacno.ToString();
             metroTextBox1.Text = konacno + "kn";
         }
@@ -187,7 +187,7 @@ namespace Program
                 }
             }
 
-            double iznos = 10;
+            double iznos = 0;
             foreach (object j in listBox1.Items)
             {
                     if (j.Equals("Glavno jelo"))
@@ -210,6 +210,7 @@ namespace Program
 
             iznosKucica = (decimal)iznos;
             metroTextBox1.Text = iznos + "kn";
+            izracunaj();
 
         }
 

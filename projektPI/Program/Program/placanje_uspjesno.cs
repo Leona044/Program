@@ -31,6 +31,9 @@ namespace Program
             lblInputNacin.Text = novaNarudzba.Nacin_placanja.ToString();
             lblInputStatus.Text = novaNarudzba.Status.ToString();
             lblMobi.Text = novaNarudzba.Broj_mobitela.ToString();
+            label2.Text = novaNarudzba.Menu.ToString();
+            lblInputOpis.Text = novaNarudzba.Sadrzaj.ToString();
+            lblInputKol.Text = novaNarudzba.Kolicina.ToString();
             lblInputBr.Text = BPnarudzba.DohvatiBroj().ToString();
            // BPnarudzba.Spremi(novaNarudzba);
 
