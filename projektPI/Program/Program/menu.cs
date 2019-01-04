@@ -90,12 +90,12 @@ namespace Program
                     novaNarudzba.Sadrzaj += " | ";
                 }
                 novaNarudzba.Kolicina = Convert.ToInt32(NUD_kolicina.Value.ToString());
-                string iznosKn = metroTextBox1.ToString();
+                string iznosKn = metroTextBox1.Text.ToString();
                 string iznosBezKn = iznosKn.Replace("kn", "");
                 novaNarudzba.Iznos = Convert.ToDouble(iznosBezKn);
                 novaNarudzba.Adresa = textBox1.ToString();
                 novaNarudzba.Jmbag_k = prijavljeniKorisnik.Jmbag;
-                novaNarudzba.Broj_mobitela = tbInputBrmob.ToString();
+                novaNarudzba.Broj_mobitela = tbInputBrmob.Text.ToString();
                 new potvrda(this, novaNarudzba, prijavljeniKorisnik).Show();
             }
                 
@@ -187,31 +187,29 @@ namespace Program
                 }
             }
 
-           double iznos = 10;
+            double iznos = 10;
             foreach (object j in listBox1.Items)
             {
-                if(j.Equals("Glavno jelo")) 
-                {
-                    iznos += 2.50;
-                }
-                else if (j.Equals("Juha"))
-                {
-                    iznos += 1.00;
-                }
-                else if (j.Equals("Salata"))
-                {
-                    iznos += 1.00;
-                }
-                else if (j.Equals("Desert"))
-                {
-                    iznos += 2.00;
-                }
-
+                    if (j.Equals("Glavno jelo"))
+                    {
+                        iznos += 2.50;
+                    }
+                    else if (j.Equals("Juha"))
+                    {
+                        iznos += 1.00;
+                    }
+                    else if (j.Equals("Salata"))
+                    {
+                        iznos += 1.00;
+                    }
+                    else if (j.Equals("Desert"))
+                    {
+                        iznos += 2.00;
+                    }
             }
+
             iznosKucica = (decimal)iznos;
             metroTextBox1.Text = iznos + "kn";
-            
-
 
         }
 
