@@ -38,9 +38,10 @@
             // 
             // d1
             // 
-            this.d1.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.d1.BackgroundColor = System.Drawing.Color.Beige;
+            this.d1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.d1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.d1.Location = new System.Drawing.Point(12, 70);
+            this.d1.Location = new System.Drawing.Point(12, 71);
             this.d1.Name = "d1";
             this.d1.Size = new System.Drawing.Size(658, 258);
             this.d1.TabIndex = 0;
