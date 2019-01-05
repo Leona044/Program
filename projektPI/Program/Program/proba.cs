@@ -12,19 +12,41 @@ namespace Program
 {
     public partial class proba : Form
     {
-        public proba()
+        Korisnik prijavljeniKorisnik = null;
+        public proba(Korisnik korisnik)
         {
             InitializeComponent();
+            prijavljeniKorisnik = korisnik;
         }
 
-        private void OsvjeziKorisnike() {
-            List<Korisnik> listaKorisnika = BPkorisnik.DohvatiSve();
-            d1.DataSource = listaKorisnika;
+        private void OsvjeziNarudzbe() {
+            List<Narudzba> listaNarudzba = BPnarudzba.Dohvati(prijavljeniKorisnik.Jmbag);
+            d1.DataSource = listaNarudzba;
         }
 
         private void proba_Load(object sender, EventArgs e)
         {
-            OsvjeziKorisnike();
+            OsvjeziNarudzbe();
+        }
+
+        private void lblMyNarudzbe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPočetna_Click(object sender, EventArgs e)
+        {
+            new menu(prijavljeniKorisnik).Show();
+            this.Hide();
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            prijavljeniKorisnik = null;
+            prijava prijava = new prijava();
+            prijava.Show();
+            this.Hide();
+            
         }
     }
 }

@@ -60,7 +60,8 @@ namespace Program
             }
             else
             {
-                 new placanje_uspjesno(novaNarudzba, prijavljeniKorisnik).Show();   
+                 new placanje_uspjesno(novaNarudzba, prijavljeniKorisnik).Show();
+                 this.Hide();
             }
 
             

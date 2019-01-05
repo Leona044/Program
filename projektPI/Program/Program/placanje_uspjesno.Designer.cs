@@ -48,7 +48,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblInputKol = new System.Windows.Forms.Label();
             this.lblKol = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -261,6 +263,18 @@
             this.lblKol.TabIndex = 19;
             this.lblKol.Text = "Količina: ";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(366, 366);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(44, 43);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 21;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // placanje_uspjesno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,7 +282,8 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(456, 400);
+            this.ClientSize = new System.Drawing.Size(456, 434);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.lblInputKol);
             this.Controls.Add(this.lblKol);
             this.Controls.Add(this.label2);
@@ -296,6 +311,7 @@
             this.Text = "USPJEŠNO!";
             this.Load += new System.EventHandler(this.placanje_uspjesno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +337,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblInputKol;
         private System.Windows.Forms.Label lblKol;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

@@ -44,5 +44,11 @@ namespace Program
         {
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            new proba(prijavljeniKorisnik).Show();
+            this.Hide();
+        }
     }
 }

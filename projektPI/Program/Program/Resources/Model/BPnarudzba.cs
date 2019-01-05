@@ -45,7 +45,7 @@ namespace Program
 
             SQLiteCommand command = BP.konekcija.CreateCommand();
 
-            command.CommandText = String.Format("Select * from narudzba");
+            command.CommandText = String.Format("Select * from Narudzba");
 
             SQLiteDataReader reader = command.ExecuteReader();
 
@@ -62,7 +62,7 @@ namespace Program
                 n.Sadrzaj = (string)reader["sadrzaj"];
                 n.Adresa = (string)reader["adresa"];
                 n.Broj_mobitela = (string)reader["broj_mobitela"];
-                n.Nacin_placanja = (string)reader["nacin placanja"];
+                n.Nacin_placanja = (string)reader["nacin_placanja"];
 
                 lista.Add(n);
             }
@@ -99,7 +99,7 @@ namespace Program
             return broj;
         }
 
-        public static List<Narudzba> Dohvati(string status)
+        public static List<Narudzba> Dohvati(long jmbag)
         {
             List<Narudzba> lista = new List<Narudzba>();
 
@@ -107,7 +107,7 @@ namespace Program
 
             SQLiteCommand command = BP.konekcija.CreateCommand();
 
-            command.CommandText = String.Format("Select * from narudzba where status = '{0}'", status);
+            command.CommandText = String.Format("Select * from narudzba where id_k = '{0}'", jmbag);
 
             SQLiteDataReader reader = command.ExecuteReader();
 
@@ -124,7 +124,7 @@ namespace Program
                 n.Sadrzaj = (string)reader["sadrzaj"];
                 n.Adresa = (string)reader["adresa"];
                 n.Broj_mobitela = (string)reader["broj_mobitela"];
-                n.Nacin_placanja = (string)reader["nacin placanja"];
+                n.Nacin_placanja = (string)reader["nacin_placanja"];
 
 
                 lista.Add(n);

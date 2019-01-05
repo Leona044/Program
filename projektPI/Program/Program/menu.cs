@@ -261,5 +261,11 @@ namespace Program
         {
 
         }
+
+        private void btnMojeNaru_Click(object sender, EventArgs e)
+        {
+            new proba(prijavljeniKorisnik).Show();
+            this.Hide();
+        }
     }
 }

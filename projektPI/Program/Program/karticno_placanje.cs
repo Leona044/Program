@@ -56,6 +56,7 @@ namespace Program
                 if(bVisaOkvir.BackColor.Equals(Color.Yellow) || bMaestroOkvir.BackColor.Equals(Color.Yellow) || bMasterOkvir.BackColor.Equals(Color.Yellow) || bAmexOkvir.BackColor.Equals(Color.Yellow))
                 {
                     new placanje_uspjesno(novaNarudzba, prijavljeniKorisnik).Show();
+                    this.Hide();
                 }
                 else
                 {
