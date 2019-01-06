@@ -331,7 +331,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(150, 11);
+            this.textBox1.Location = new System.Drawing.Point(150, 20);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(192, 20);
             this.textBox1.TabIndex = 17;
@@ -354,9 +354,9 @@
             this.mp_adresaupis.HorizontalScrollbarBarColor = true;
             this.mp_adresaupis.HorizontalScrollbarHighlightOnWheel = false;
             this.mp_adresaupis.HorizontalScrollbarSize = 10;
-            this.mp_adresaupis.Location = new System.Drawing.Point(0, 351);
+            this.mp_adresaupis.Location = new System.Drawing.Point(0, 341);
             this.mp_adresaupis.Name = "mp_adresaupis";
-            this.mp_adresaupis.Size = new System.Drawing.Size(365, 67);
+            this.mp_adresaupis.Size = new System.Drawing.Size(365, 77);
             this.mp_adresaupis.TabIndex = 18;
             this.mp_adresaupis.VerticalScrollbarBarColor = true;
             this.mp_adresaupis.VerticalScrollbarHighlightOnWheel = false;
@@ -366,7 +366,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(177, 18);
+            this.label3.Location = new System.Drawing.Point(177, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 22;
@@ -377,7 +377,7 @@
             this.lblBrojmob.AutoSize = true;
             this.lblBrojmob.BackColor = System.Drawing.Color.Transparent;
             this.lblBrojmob.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrojmob.Location = new System.Drawing.Point(10, 41);
+            this.lblBrojmob.Location = new System.Drawing.Point(10, 50);
             this.lblBrojmob.Name = "lblBrojmob";
             this.lblBrojmob.Size = new System.Drawing.Size(124, 14);
             this.lblBrojmob.TabIndex = 21;
@@ -387,7 +387,7 @@
             // tbInputBrmob
             // 
             this.tbInputBrmob.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbInputBrmob.Location = new System.Drawing.Point(150, 38);
+            this.tbInputBrmob.Location = new System.Drawing.Point(150, 47);
             this.tbInputBrmob.Name = "tbInputBrmob";
             this.tbInputBrmob.Size = new System.Drawing.Size(192, 20);
             this.tbInputBrmob.TabIndex = 20;
@@ -398,7 +398,7 @@
             // 
             this.lblUpisObavezan.AutoSize = true;
             this.lblUpisObavezan.BackColor = System.Drawing.Color.Transparent;
-            this.lblUpisObavezan.Location = new System.Drawing.Point(177, -6);
+            this.lblUpisObavezan.Location = new System.Drawing.Point(177, 6);
             this.lblUpisObavezan.Name = "lblUpisObavezan";
             this.lblUpisObavezan.Size = new System.Drawing.Size(0, 13);
             this.lblUpisObavezan.TabIndex = 19;
@@ -408,7 +408,7 @@
             this.lbl_upisiadresu.AutoSize = true;
             this.lbl_upisiadresu.BackColor = System.Drawing.Color.Transparent;
             this.lbl_upisiadresu.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_upisiadresu.Location = new System.Drawing.Point(10, 14);
+            this.lbl_upisiadresu.Location = new System.Drawing.Point(10, 23);
             this.lbl_upisiadresu.Name = "lbl_upisiadresu";
             this.lbl_upisiadresu.Size = new System.Drawing.Size(134, 14);
             this.lbl_upisiadresu.TabIndex = 18;
