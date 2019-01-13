@@ -82,6 +82,16 @@ namespace Program
                 lblUpisObavezan.Text = "Obavezno popuniti polje!";
                 lblUpisObavezan.ForeColor = Color.Red; 
             }
+            else if (string.IsNullOrWhiteSpace(tbInputBrmob.Text))
+            {
+                lblUpisObavezan.Text = "Obavezno popuniti polje!";
+                lblUpisObavezan.ForeColor = Color.Red;
+            }
+            else if (!(b_menu1.BackColor.Equals(Color.Yellow) || b_menu2.BackColor.Equals(Color.Yellow) || b_vege.BackColor.Equals(Color.Yellow)))
+            {
+                MessageBox.Show("Odaberite vrstu menu-a. Pokušajte ponovno.", "Greška kod odabira!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             else
             {
                 foreach (object j in listBox1.Items)
@@ -266,6 +276,11 @@ namespace Program
         {
             new proba(prijavljeniKorisnik).Show();
             this.Hide();
+        }
+
+        private void tbInputBrmob_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            lblUpisObavezan.Text = "";
         }
     }
 }

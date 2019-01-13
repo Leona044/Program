@@ -393,6 +393,7 @@
             this.tbInputBrmob.TabIndex = 20;
             this.tbInputBrmob.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbInputBrmob.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.tbInputBrmob.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbInputBrmob_KeyPress);
             // 
             // lblUpisObavezan
             // 

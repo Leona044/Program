@@ -16,6 +16,7 @@ namespace Program
     {
         Korisnik prijavljeniKorisnik = null;
         Narudzba novaNarudzba = null;
+        int brojac = 0;
         public paypal(Narudzba novaNarudzba, Korisnik prijavljeniKorisnik)
         {
             InitializeComponent();
@@ -58,6 +59,10 @@ namespace Program
                 tbInputEm.Clear();
                 tbInputPass.Clear();
             }
+            else if (brojac == 0 || brojac == 1)
+            {
+                MessageBox.Show("Neispravan e-mail ili lozinka. Pokušajte ponovno.", "Greška kod prijave!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                  new placanje_uspjesno(novaNarudzba, prijavljeniKorisnik).Show();
@@ -70,12 +75,14 @@ namespace Program
         private void tbInputEm_Click(object sender, EventArgs e)
         {
             tbInputEm.Text = "";
+            brojac++;
             tbInputEm.ForeColor = Color.Black;
         }
 
         private void tbInputPass_Click(object sender, EventArgs e)
         {
             tbInputPass.Text = "";
+            brojac++;
             tbInputPass.ForeColor = Color.Black;
         }
     }

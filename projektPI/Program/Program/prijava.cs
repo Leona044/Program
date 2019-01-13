@@ -24,7 +24,6 @@ namespace Program
         private void B_prijava_Click(object sender, EventArgs e)
         {
         
-           // prijava prijava = new prijava();
             string email = inputEmail.Text;
             string lozinka = inputLozinka.Text;
 
