@@ -5,7 +5,7 @@ namespace Program
 {
     public static class BP
     {
-        private static string connectionString = "Data Source = C:\\Users\\Leona Strucelj\\Desktop\\projekt_menzaTOGO\\Program\\mybaza.db";
+        private static string connectionString = "Data Source = D:\\projekt_menzaTOGO\\Program\\mybaza.db";
 
         internal static SQLiteConnection konekcija = new SQLiteConnection (connectionString);
 
