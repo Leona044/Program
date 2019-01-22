@@ -43,9 +43,19 @@ namespace Program
                     {
                         korisnikLogin = upisano.ElementAt<Korisnik>(i);
                     }
-                    new menu(korisnikLogin).Show(); 
-                    this.Hide();
-                    axWindowsMediaPlayer1.Ctlcontrols.stop();
+                    if (korisnikLogin.Email.Equals("zaposlenik@unipu.hr"))
+                    {
+                        new narudzbezaposlenik().Show();
+                        this.Hide();
+                        axWindowsMediaPlayer1.Ctlcontrols.stop();
+                    }
+                    else
+                    {
+                        new menu(korisnikLogin).Show(); 
+                        this.Hide();
+                        axWindowsMediaPlayer1.Ctlcontrols.stop();
+                    }
+                   
                 }
                 else
                 {

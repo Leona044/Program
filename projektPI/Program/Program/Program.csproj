@@ -83,6 +83,12 @@
     <Compile Include="nacin_placanja.designer.cs">
       <DependentUpon>nacin_placanja.cs</DependentUpon>
     </Compile>
+    <Compile Include="narudzbezaposlenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="narudzbezaposlenik.Designer.cs">
+      <DependentUpon>narudzbezaposlenik.cs</DependentUpon>
+    </Compile>
     <Compile Include="paypal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,18 +127,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Model\BP.cs" />
-    <Compile Include="Resources\Model\BPkorisnik.cs" />
-    <Compile Include="Resources\Model\BPnarudzba.cs" />
-    <Compile Include="Resources\Model\Korisnik.cs" />
-    <Compile Include="Resources\Model\Menu.cs" />
-    <Compile Include="Resources\Model\Narudzba.cs" />
-    <Compile Include="Resources\Model\pomocna.cs" />
+    <Compile Include="Resources\BP.cs" />
+    <Compile Include="Resources\BPkorisnik.cs" />
+    <Compile Include="Resources\BPnarudzba.cs" />
+    <Compile Include="Resources\Korisnik.cs" />
+    <Compile Include="Resources\Menu.cs" />
+    <Compile Include="Resources\Narudzba.cs" />
+    <Compile Include="Resources\pomocna.cs" />
     <EmbeddedResource Include="karticno_placanje.resx">
       <DependentUpon>karticno_placanje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="nacin_placanja.resx">
       <DependentUpon>nacin_placanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="narudzbezaposlenik.resx">
+      <DependentUpon>narudzbezaposlenik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="paypal.resx">
       <DependentUpon>paypal.cs</DependentUpon>
